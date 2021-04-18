@@ -9,8 +9,27 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Slab';
 }
 
+h2 {
+    padding-bottom: 4px;
+    border-bottom: 1px solid lightgrey;
+}
+
+
 body {
     font-family: 'PT Serif';
+    font-size: 18px;
+}
+
+pre {
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    overflow-x: auto;
+    padding: 8px 12px;
+}
+
+code {
+    font-family: 'Roboto Mono';
+    font-size: 14px;
 }
 
 /* Site nav */
@@ -20,12 +39,21 @@ body {
 }
 
 .topnav-home {
+    font-size: 24px;
+}
 
+a.topnav-home:link {
+    text-decoration: none;
 }
 
 .topnav-right {
     float: right;
     padding-right: 10px;
+    padding-top: 10px;
+}
+
+.topnav-rightmost {
+    padding-right: 0px;
 }
 
 /* Shared content */
@@ -35,3 +63,95 @@ body {
     margin-right: auto;
     max-width: 900px;
 }
+
+#content {
+    padding-bottom: 40px;
+}
+
+/* List pages */
+
+.list-meta {
+    float: right;
+    color: grey;
+}
+
+.list-list {
+    list-style-type: none;
+}
+
+/* Footnotes */
+
+#content {
+    counter-reset: footnotes;
+}
+
+a[aria-describedby="footnote-label"] {
+    counter-increment: footnotes;
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
+    outline: none;
+}
+
+a[aria-describedby="footnote-label"]::after {
+    content: "[" counter(footnotes) "]";
+    font-size: 0.65em;
+    margin-left: 2px;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a[aria-describedby="footnote-label"]:focus::after {
+    outline: thin dotted;
+    outline-offset: 2px;
+}
+
+footer :target {
+    background: pink;
+}
+
+footer {
+    border-top: 1px solid lightgrey;
+    margin: 30px 15px 0px 15px;
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+/* Figures */
+
+figure {
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    figure {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+figcaption {
+    margin-top: 8px;
+    text-align: center;
+    font-style: italic;
+    font-size: 15px;
+    color: #444;
+}
+
+/* Quotes */
+
+blockquote {
+    padding-left: 10px;
+    margin-left: 0px;
+    border-left: 1px solid lightgrey;
+}
+

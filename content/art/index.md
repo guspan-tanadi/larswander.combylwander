@@ -4,8 +4,6 @@ date: 2021-04-17
 draft: false
 ---
 
-# Art 
-
 When I was little, my dad told me
 
 > "A computer always does _exactly_ what you tell it to do." 
