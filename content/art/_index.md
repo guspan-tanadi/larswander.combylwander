@@ -2,6 +2,7 @@
 title: "Art"
 date: 2021-04-17
 draft: false
+homepage: true
 ---
 
 When I was little, my dad told me
@@ -18,4 +19,5 @@ chasing down lies in a mistaken explanation or misunderstanding between you and
 the machine.
 
 Yet somehow, and almost as-if by magic, there are times when you know _exactly_ 
-what the computer will do, and it still surprises you.
+what the computer will do, and it still surprises you. I want to capture those
+moments in my art.

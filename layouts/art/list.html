@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+
+  {{ .Content }}
+
+  <h2>Series</h2>
+  {{ range .Pages }}
+  <li class="list-list">
+    <a class="list-link" href="{{ .Permalink }}">{{ .Title}}</a> 
+    <span class="list-meta">{{ .Date.Format "2006-01-02" }}</span>
+    <p class="list-summary"> {{ .Summary }} </p>
+  </li>
+  {{ end }}
+{{ end }}
+
