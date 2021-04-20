@@ -1,5 +1,16 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-<span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
-{{ .Content }}
+  <div class="post-head">
+    <h1>{{ .Title }}</h1>
+    {{ if gt .WordCount 300 }}
+      <aside>
+        {{ .TableOfContents }}
+      </aside>
+    {{end}}
+    {{ if .Date }}
+      <span class="post-date">
+        {{ .Date.Format "2006-01-02" }}
+      </span> 
+    {{ end }}
+  </div>
+  {{ .Content }}
 {{ end }}

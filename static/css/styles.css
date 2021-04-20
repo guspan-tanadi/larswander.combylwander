@@ -3,6 +3,13 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    initial-letter: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -14,10 +21,13 @@ h2 {
     border-bottom: 1px solid lightgrey;
 }
 
+h3, h4, h5, h6 {
+    margin-bottom: 0px;
+}
 
 body {
     font-family: 'PT Serif';
-    font-size: 18px;
+    font-size: 17px;
 }
 
 pre {
@@ -25,17 +35,20 @@ pre {
     border-radius: 6px;
     overflow-x: auto;
     padding: 8px 12px;
+    margin-bottom: 20px;
 }
 
 code {
     font-family: 'Roboto Mono';
-    font-size: 14px;
+    font-size: 15px;
 }
 
 /* Site nav */
 
 .topnav {
-    padding-top: 40px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .topnav-home {
@@ -61,11 +74,13 @@ a.topnav-home:link {
 .centered {
     margin-left: auto;
     margin-right: auto;
-    max-width: 900px;
+    max-width: 1100px;
 }
 
 #content {
     padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* List pages */
@@ -146,13 +161,6 @@ img {
     margin-right: auto;
 }
 
-@media only screen and (max-width: 600px) {
-    figure {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-
 figcaption {
     margin-top: 8px;
     text-align: center;
@@ -161,11 +169,90 @@ figcaption {
     color: #444;
 }
 
+figure.art {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: flex-start;
+    vertical-align: top;
+}
+
+.art img {
+    width: 60%;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.art figcaption {
+    font-style: normal;
+    font-size: 17px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 30px;
+    margin-top: 0px;
+    margin-left: 20px;
+    border-left: 1px solid lightgrey;
+}
+
+@media only screen and (max-width: 600px) {
+    figure.art {
+        flex-direction: column;
+    }
+
+    .art img {
+        width: 100%;
+    }
+
+    .art figcaption {
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-bottom: 10px;
+        margin-top: 20px;
+        border-right: 1px solid lightgrey;
+        border-bottom: 1px solid lightgrey;
+        border-left: 0px solid lightgrey;
+    }
+}
+
 /* Quotes */
 
 blockquote {
     padding-left: 10px;
     margin-left: 0px;
-    border-left: 1px solid lightgrey;
+    color: #333;
+    border-left: 3px solid lightgrey;
 }
 
+/* Aside */
+
+.post-head aside {
+    float: right;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    padding-right: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.post-head ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 13px;
+}
+
+.post-head li ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+    .post-head aside {
+        float: none;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+}
