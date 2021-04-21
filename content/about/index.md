@@ -10,10 +10,11 @@ You can find me around the web:
 
 ### Profiles
 
+* [instagram](https://instagram.com/larswander): most of my art gets posted
+    here.
+* [twitter](https://twitter.com/larswander)
 * [github](https://github.com/lwander)
 * [soundcloud](https://soundcloud.com/la-w-nder)
-* [instagram](https://instagram.com/larswander)
-* [twitter](https://twitter.com/larswander)
 * [linkedin](https://www.linkedin.com/in/lars-wander-82697897)
 * [medium](https://medium.com/@larswander/about)
 * [dev.to](https://dev.to/lwander)

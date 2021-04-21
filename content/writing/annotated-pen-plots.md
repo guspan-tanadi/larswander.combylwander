@@ -14,7 +14,7 @@ these tips into your own work!
 After several months of pen plotting I've managed to accumulate quite a thick
 stack of plots:
 
-<figure>
+<figure class="art">
   <img src="/img/posts/annotated-pen-plots/all-plots.webp" alt="All plots">
   <figcaption>There's a few hundred plots here; maybe every 1 in 20 or so is
   actually worth sharing, but they're all a part of the process.</figcaption>
@@ -37,7 +37,7 @@ follower wanted a copy for themselves.  However, there were a few problems:
 I was able to solve these problems by having the pen plotter 
 write all necessary metadata (and then some) on the back of each plot:
 
-<figure>
+<figure class="art">
   <img src="/img/posts/annotated-pen-plots/example.webp" alt="Example metadata">
   <figcaption>It takes between 5 and 10 minutes to annotate each plot with this
   metadata. I'll explain what it's saying below.</figcaption>
