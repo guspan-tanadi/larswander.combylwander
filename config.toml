@@ -1,5 +1,5 @@
-baseURL = "https://larswander.net"
+baseURL = "https://larswander.com"
 languageCode = "en-us"
 title = "Lars Wander"
 [markup.goldmark.renderer]
-unsafe= true
+unsafe = true

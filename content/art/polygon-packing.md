@@ -158,8 +158,8 @@ href="#pen-gradient">boundaries</a>:
 ### Watercolor
 
 For fun, I've also used the pen plotter to <a
-aria-describedby="footnote-label" href="#watercolor-gradient">create</a> a <a
-aria-describedby="footnote-label" href="#watercolor">watercolor</a> of these triangle
+aria-describedby="footnote-label" href="#watercolor-gradient">create</a> a
+[watercolor](/writing/watercolor-plots) of these triangle
 packings:
 
 <figure class="art">
@@ -295,12 +295,6 @@ library. If folks are interested, this could be the topic of another blog post.
       The intensity gradient from dark to light comes was intentional this
       case, and came from progressively diluting the watercolor source as the
       plot progressed. 
-	</li>
-	<li id="watercolor">
-      I'll be writing about the process of using a pen plotter to create
-      watercolor painting soon. For now, you can <a
-      href="https://www.instagram.com/stories/highlights/17875678394285584/" target="_blank">watch it in action on my
-      Instagram</a>.
 	</li>
 	<li id="optimized">
       Early attempts at packing using pure Python wound up taken 10+ minutes to

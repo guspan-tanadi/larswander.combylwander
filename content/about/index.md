@@ -13,6 +13,7 @@ You can find me around the web:
 * [instagram](https://instagram.com/larswander): most of my art gets posted
     here.
 * [twitter](https://twitter.com/larswander)
+* [hicetnunc](https://hicetnunc.art/larswander)
 * [github](https://github.com/lwander)
 * [soundcloud](https://soundcloud.com/la-w-nder)
 * [linkedin](https://www.linkedin.com/in/lars-wander-82697897)
