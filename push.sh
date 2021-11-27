@@ -2,4 +2,4 @@
 
 rm -r public
 hugo
-gsutil cp -m -r public/* gs://lwander-site/
+gsutil -m cp -r public/* gs://lwander-site/
