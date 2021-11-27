@@ -195,10 +195,9 @@ figure.wide {
     padding-left: 0px;
     padding-bottom: 10px;
     margin-top: 20px;
-    margin-left: 10px;
+    margin-left: auto;
     border-right: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
-    border-radius: 6px;
 }
 
 figure.art {

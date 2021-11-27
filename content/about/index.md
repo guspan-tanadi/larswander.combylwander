@@ -3,23 +3,23 @@ title: "About"
 draft: false
 ---
 
-I'm a programmer working at Google, and this is my <a aria-describedby="footnote-label" href="#homepage">hompage</a>. Thoughts & opinions shared here are mine,
-and not that of any employer.
+I'm a programmer working at Google, and this is my <a
+aria-describedby="footnote-label" href="#homepage">hompage</a>. Thoughts &
+opinions shared here are mine, and not that of any employer.
 
 You can find me around the web:
 
 ### Profiles
 
-* [instagram](https://instagram.com/larswander): most of my art gets posted
-    here.
+* [instagram](https://instagram.com/larswander)
 * [twitter](https://twitter.com/larswander)
 * [hicetnunc](https://hicetnunc.art/larswander)
+* [opensea](https://opensea.io/collection/lars-wander-art)
 * [github](https://github.com/lwander)
 * [soundcloud](https://soundcloud.com/la-w-nder)
 * [linkedin](https://www.linkedin.com/in/lars-wander-82697897)
 * [medium](https://medium.com/@larswander/about)
 * [dev.to](https://dev.to/lwander)
-* [opensea](https://opensea.io/collection/lars-wander-art)
 
 ### Books, Podcasts, Talks...
 
