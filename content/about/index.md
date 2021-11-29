@@ -15,11 +15,12 @@ You can find me around the web:
 * [twitter](https://twitter.com/larswander)
 * [hicetnunc](https://hicetnunc.art/larswander)
 * [opensea](https://opensea.io/collection/lars-wander-art)
+* [fxhash](https://www.fxhash.xyz/u/larswander)
+* [foundation](https://foundation.app/@larswander)
 * [github](https://github.com/lwander)
 * [soundcloud](https://soundcloud.com/la-w-nder)
-* [linkedin](https://www.linkedin.com/in/lars-wander-82697897)
 * [medium](https://medium.com/@larswander/about)
-* [dev.to](https://dev.to/lwander)
+* [linkedin](https://www.linkedin.com/in/lars-wander-82697897)
 
 ### Books, Podcasts, Talks...
 
