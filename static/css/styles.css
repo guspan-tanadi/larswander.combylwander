@@ -291,6 +291,12 @@ blockquote {
     }
 }
 
-.twitter-tweet {
-    margin-left: 10px;
+.thumbnail-grid {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+}
+
+.thumbnail-grid-item {
+  margin: 10px;
+  margin-bottom: 5px;
 }
