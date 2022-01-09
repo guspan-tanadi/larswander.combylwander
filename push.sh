@@ -2,4 +2,4 @@
 
 rm -r public
 hugo
-gsutil -m cp -r public/* gs://lwander-site/
+gsutil -m rsync -c -r public/ gs://lwander-site/
