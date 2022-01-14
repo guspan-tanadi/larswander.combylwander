@@ -1,7 +1,8 @@
 ---
 title: "Polygon Packing"
 date: 2021-04-21
-summary: Laying many shapes edge-to-edge, and exploring the textures they create.
+summary: Pen-plotter pieces exploring the textures created by reflecting one shape over itself
+thumbnails: [/img/art/polygon-packing/triangle-flat.webp, /img/art/polygon-packing/triangle-watercolor.webp]
 draft: false
 ---
 
