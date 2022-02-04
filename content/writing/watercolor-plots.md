@@ -23,15 +23,7 @@ results:
 
 ## Selected pieces
 
-<figure class="art">
-  <img src="/img/art/polygon-packing/triangle-watercolor.webp" alt="Watercolor packing of triangles">
-  <figcaption>Filled triangles, placed in a <a href="/art/polygon-packing">polygon
-  packing</a>. <br><br>You'll notice that the shapes in the center are more
-  vivid & saturated. They were drawn first, and I added water to the paint tray
-  as the plot progressed.<br><br>You may also notice a stray blue dot on the
-  left-hand side. Paint is messy!
-  </figcaption>
-</figure>
+</body></html>
 
 <figure class="art">
   <img src="/img/posts/watercolor-plots/flow-wiggles.webp" alt="Wiggly
@@ -278,6 +270,19 @@ ways.
 That it's for now, looking forward to what everyone creates!
 
 Happy plotting!
+
+## Addendum 
+
+<span class="post-date">2022-01-27</span>
+
+I've since epoxy-coated all of my 3D-printed paint trays. This has had a few
+benefits:
+
+1. The epoxy doesn't seem to stain in the same way the PETG does, so there is
+   less fear of cross-contamination between colors.
+1. They are way easier to clean.
+1. The roughness of the 3D printed surface is gone, reducing the wear on the
+   bristles of my brushes.
 
 <footer>
   <ol>

@@ -1,6 +1,7 @@
 ---
 title: "Guitar Voicings"
 date: 2020-05-10
+draft: true
 ---
 
 As I was working my way through [Melbay's Complete Book of Harmony, Theory &
