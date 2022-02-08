@@ -1,15 +1,16 @@
 ---
 title: Lines Walking
-date: 2022-01-09
+date: 2022-02-08
 summary: First long-form plotter series. Released on Plottables.
-thumbnails: [/img/art/lines-walking/high-res/localhost-1-plot-1.jpg]
+thumbnails: [/img/art/lines-walking/high-res/localhost-1-plot-1.webp, /img/art/lines-walking/high-res/localhost-1-svg-1.webp]
 draft: false
 ---
 
 "Lines Walking" is a
 "[long-form](https://tylerxhobbs.com/essays/2021/the-rise-of-long-form-generative-art)"
 generative series of 44 pieces made for the pen-plotter. The project is
-published on [Plottables](https://plottables.io/project/4).
+published on [Plottables](https://plottables.io/project/4), and will be
+available to mint on February 9th, 2022 at 3PM EST (20:00 UTC).
 
 Each edition of 44 is generated from a single piece of computer code, and is
 tokenized for ownership. In addition, each edition will be plotted <a
@@ -18,17 +19,18 @@ aria-describedby="footnote-label" href="#at-most-once">once
 
 Once all editions are plotted, each "Lines Walking" has a physical and digital
 instantiation; I strongly encourage owners to keep these together as they are
-separate representations of the same piece.
+separate representations of the same piece. Owners are welcome to sell their
+digital token without claiming the physical plot. The new owner can claim it
+instead once the plot is available.
 
 This piece is a study of the interaction of simple rules, relying heavily on 
 repetition to highlight how complex and subtle these interactions become.
 
 <figure class="wide">
-  <img src="/img/art/lines-walking/high-res/localhost-1-plot-1.jpg">
-  <figcaption>A plot of testnet mint #0. <br><br>
-    <a href="/img/art/lines-walking/high-res/localhost-1-plot-1.jpg">high-res</a>
+  <img src="/img/art/lines-walking/high-res/localhost-1-plot-1.webp">
+  <figcaption>A plot of testnet mint #0<br><br>
+    <a href="/img/art/lines-walking/high-res/localhost-1-plot-1.jpg">high-res</a> · <a href="https://ropsten.plottables.io/token/14000000">ropsten</a>
   </figcaption>
-
 </figure>
 
 ## All Outputs are Plotted
@@ -50,7 +52,7 @@ owner for the price of shipping. However, the plots won't be available
 immediately after minting; it can take hours to complete just a single
 color, and if any mistakes occur, the plot needs to be restarted from scratch.
 To accomodate this, plots will be made available one-by-one on a fixed
-schedule.
+[schedule](#schedule).
 
 <br>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Very slow... But the
@@ -74,9 +76,9 @@ fact that this emergent complexity exists is no longer a surprise these days.
 However, _where_ this complexity exists, and _how_ it is expressed can be
 wonderful to discover.
 
-It's by no means necessary to understand what the code is doing in generative
-art to appreciate it, but I strongly believe that even having only a high-level
-understanding of the code behind a piece of art enhances it.
+It's by no means necessary to understand what the code is doing in a generative
+artwork to appreciate it, but I strongly believe that even having only a
+high-level understanding of the code behind a piece of art enhances it.
 
 The core idea behind "Lines Walking" is as follows: Lines advance on a
 hexagonal grid, traveling from one neighboring cell to the next. If they reach
@@ -510,7 +512,7 @@ some of my favorites:
 <br>
 
 <figure class="wide">
-  <img src="/img/art/lines-walking/high-res/original-1.jpg">
+  <img src="/img/art/lines-walking/high-res/original-1.webp">
   <figcaption>
     Early "Lines Walking" on a square grid<br><br>Spring 2021 ·
     <a href="/img/art/lines-walking/high-res/original-1.jpg">high-res</a>
@@ -532,9 +534,9 @@ and slightly surreal feeling of perspective.
 <br>
 
 <figure class="wide">
-  <img src="/img/art/lines-walking/high-res/original-3.jpg">
+  <img src="/img/art/lines-walking/high-res/original-3.webp">
   <figcaption>
-    "Lines Walking" on a hexagonal grid<br><br>Spring 2021 ·
+    Early "Lines Walking" on a hexagonal grid<br><br>Spring 2021 ·
     <a href="/img/art/lines-walking/high-res/original-3.jpg">high-res</a>
   </figcaption>
 </figure>
@@ -580,7 +582,7 @@ test prints.
 
 </br>
 <figure class="art">
-  <img src="/img/art/lines-walking/high-res/test-prints.jpg">
+  <img src="/img/art/lines-walking/high-res/test-prints.webp">
   <figcaption>
     A small sample of the test prints produced while iterating on the colors &
     algorithm.<br><br>
@@ -647,8 +649,30 @@ write some custom code. Here is a very high-level approach to get you started:
    of a line, even if it "wraps" around from one side of the hexagonal grid to
    the other.
 
-If you plot the resulting SVG as normal, the plotter will make a "circle"
-in your paint tray before every line that requires a paint refill.
+As an example, I've highlighted where to insert refills in this fictional SVG:
+
+```
+<svg xmlns="http://www.w3.org/2000/svg ...>
+  <g class="viridian" ...>
+    <!-- insert a paint refill <circle> here -->
+    <polyline class="refill" points="..."></polyline>
+    <polyline class="no-refill" points="..."></polyline>
+    <!-- ... and here -->
+    <polyline class="refill" points="..."></polyline>
+    ...
+  </g>
+  <g class="sap-green" ...>
+    ...
+  </g>
+  <g class="rose" ...>
+    ...
+  </g>
+  ...
+</svg>
+```
+
+If you plot the resulting SVG, the plotter will make a "circle" in your paint
+tray before every line that requires a paint refill.
 
 ## Features
 
@@ -668,7 +692,7 @@ __`Color`__, __`Steps`__, __`Fullness`__, __`Curves`__, __`Breaks`__.
         simplest rule of the 4, as it keeps track of no state and turns only
         when a collision happens.
       </figcaption>
-      <img src="/img/art/lines-walking/high-res/rule-a.png">
+      <img src="/img/art/lines-walking/high-res/rule-a.webp">
     </figure>
     <figure class="explain">
       <figcaption>
@@ -676,7 +700,7 @@ __`Color`__, __`Steps`__, __`Fullness`__, __`Curves`__, __`Breaks`__.
         started in. This results in lines froming little "squiggles" as they
         weave back and forth trying to face their target direction.
       </figcaption>
-      <img src="/img/art/lines-walking/high-res/rule-b.png">
+      <img src="/img/art/lines-walking/high-res/rule-b.webp">
     </figure>
     <figure class="explain">
       <figcaption>
@@ -686,7 +710,7 @@ __`Color`__, __`Steps`__, __`Fullness`__, __`Curves`__, __`Breaks`__.
         <b><code>Curves</code></b> attribute is set. When they do collide,
         they produce some very organic and nestled forms.
       </figcaption>
-      <img src="/img/art/lines-walking/high-res/rule-c.png">
+      <img src="/img/art/lines-walking/high-res/rule-c.webp">
     </figure>
     <figure class="explain">
       <figcaption>
@@ -696,7 +720,7 @@ __`Color`__, __`Steps`__, __`Fullness`__, __`Curves`__, __`Breaks`__.
         cute, as they seem to curl up and give up the moment they run into
         trouble.
       </figcaption>
-      <img src="/img/art/lines-walking/high-res/rule-d.png">
+      <img src="/img/art/lines-walking/high-res/rule-d.webp">
     </figure>
     <br>
 * __`Color`__ &nbsp; There are also 4 color schemes. How lines are assigned colors
@@ -706,28 +730,28 @@ __`Color`__, __`Steps`__, __`Fullness`__, __`Curves`__, __`Breaks`__.
         <b><code>Meadow</code></b> is drawn in Viridian, Sap Green, and
         Permanent Pink.
       </figcaption>
-      <img class="inline" src="/img/art/lines-walking/high-res/color-meadow.png">
+      <img class="inline" src="/img/art/lines-walking/high-res/color-meadow.webp">
     </figure>
     <figure class="explain">
       <figcaption>
         <b><code>Blush</code></b> is drawn in Cobalt Turquoise, Prussian Blue,
         and Permanent Pink.
         </figcaption>
-      <img class="inline" src="/img/art/lines-walking/high-res/color-blush.png">
+      <img class="inline" src="/img/art/lines-walking/high-res/color-blush.webp">
     </figure>
     <figure class="explain">
       <figcaption>
         <b><code>Contra</code></b> is drawn in Cobalt Turquoise, Gold Ochre,
         and Quinacridone Violet.
         </figcaption>
-      <img class="inline" src="/img/art/lines-walking/high-res/color-contra.png">
+      <img class="inline" src="/img/art/lines-walking/high-res/color-contra.webp">
     </figure>
     <figure class="explain">
       <figcaption>
         <b><code>Gold</code></b> is drawn in Cobalt Turquoise, Gold Ochre,
         and Permanent Pink.
         </figcaption>
-      <img class="inline" src="/img/art/lines-walking/high-res/color-gold.png">
+      <img class="inline" src="/img/art/lines-walking/high-res/color-gold.webp">
     </figure>
     <br>
 * __`Steps`__ and __`Fullness`__ &nbsp; These two feature values work together
@@ -741,14 +765,14 @@ __`Color`__, __`Steps`__, __`Fullness`__, __`Curves`__, __`Breaks`__.
         Low (<b><code>7</code></b>) step count, with <b><code>Packed</code></b> fullness.
       </figcaption>
       <img class="inline"
-      src="/img/art/lines-walking/high-res/steps-short-packed.png">
+      src="/img/art/lines-walking/high-res/steps-short-packed.webp">
     </figure>
     <figure class="explain">
       <figcaption>
         High (<b><code>21</code></b>) step count, with <b><code>Sparse</code></b> fullness.
       </figcaption>
       <img class="inline"
-      src="/img/art/lines-walking/high-res/steps-long-sparse.png">
+      src="/img/art/lines-walking/high-res/steps-long-sparse.webp">
     </figure>
 * __`Curves`__ is a boolean controlling whether or not lines have curves
     applied at the corners. When plotting in pen, I find the corners without
@@ -760,14 +784,14 @@ __`Color`__, __`Steps`__, __`Fullness`__, __`Curves`__, __`Breaks`__.
         <b><code>Curves</code></b> applied.
       </figcaption>
       <img class="inline"
-      src="/img/art/lines-walking/high-res/curves-true.png">
+      src="/img/art/lines-walking/high-res/curves-true.webp">
     </figure>
     <figure class="explain">
       <figcaption>
         <b><code>Curves</code></b> not applied.
       </figcaption>
       <img class="inline"
-      src="/img/art/lines-walking/high-res/curves-false.png">
+      src="/img/art/lines-walking/high-res/curves-false.webp">
     </figure>
 * __`Breaks`__ is a boolean controlling whether or not the pattern of the
     initial line placement is uniform or not. When __`true`__, the pattern is
@@ -778,14 +802,14 @@ __`Color`__, __`Steps`__, __`Fullness`__, __`Curves`__, __`Breaks`__.
         <b><code>Breaks</code></b> applied.
       </figcaption>
       <img class="inline"
-      src="/img/art/lines-walking/high-res/breaks-true.png">
+      src="/img/art/lines-walking/high-res/breaks-true.webp">
     </figure>
     <figure class="explain">
       <figcaption>
         <b><code>Breaks</code></b> not applied.
       </figcaption>
       <img class="inline"
-      src="/img/art/lines-walking/high-res/breaks-false.png">
+      src="/img/art/lines-walking/high-res/breaks-false.webp">
     </figure>
 
 ## Logistics
@@ -793,6 +817,9 @@ __`Color`__, __`Steps`__, __`Fullness`__, __`Curves`__, __`Breaks`__.
 For owners of "Lines Walking".
 
 ### Claiming a Plot
+
+> You can contact me via direct message on 
+> [Twitter](https://twitter.com/larswander).
 
 To claim a plot, you must be able to prove that you currently own the
 accompanying token (i.e. sign a message with the ETH wallet holding the NFT).
@@ -811,50 +838,50 @@ to claim it.
 
 <br>
 
-<figure class='thumbnail-grid-item'> <figcaption> <b> #1 </b>: Available 2022-04-04 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #2 </b>: Available 2022-04-08 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #3 </b>: Available 2022-04-12 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #4 </b>: Available 2022-04-16 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #5 </b>: Available 2022-04-20 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #6 </b>: Available 2022-04-24 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #7 </b>: Available 2022-04-28 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #8 </b>: Available 2022-05-02 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #9 </b>: Available 2022-05-06 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #10 </b>: Available 2022-05-10 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #11 </b>: Available 2022-05-14 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #12 </b>: Available 2022-05-18 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #13 </b>: Available 2022-05-22 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #14 </b>: Available 2022-05-26 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #15 </b>: Available 2022-05-30 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #16 </b>: Available 2022-06-03 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #17 </b>: Available 2022-06-07 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #18 </b>: Available 2022-06-11 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #19 </b>: Available 2022-06-15 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #20 </b>: Available 2022-06-19 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #21 </b>: Available 2022-06-23 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #22 </b>: Available 2022-06-27 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #23 </b>: Available 2022-07-01 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #24 </b>: Available 2022-07-05 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #25 </b>: Available 2022-07-09 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #26 </b>: Available 2022-07-13 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #27 </b>: Available 2022-07-17 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #28 </b>: Available 2022-07-21 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #29 </b>: Available 2022-07-25 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #30 </b>: Available 2022-07-29 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #31 </b>: Available 2022-08-02 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #32 </b>: Available 2022-08-06 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #33 </b>: Available 2022-08-10 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #34 </b>: Available 2022-08-14 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #35 </b>: Available 2022-08-18 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #36 </b>: Available 2022-08-22 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #37 </b>: Available 2022-08-26 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #38 </b>: Available 2022-08-30 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #39 </b>: Available 2022-09-03 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #40 </b>: Available 2022-09-07 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #41 </b>: Available 2022-09-11 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #42 </b>: Available 2022-09-15 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #43 </b>: Available 2022-09-19 · Not yet claimed</figcaption> </figure>
-<figure class='thumbnail-grid-item'> <figcaption> <b> #44 </b>: Available 2022-09-23 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #0 </b>: Available 2022-04-04 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #1 </b>: Available 2022-04-08 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #2 </b>: Available 2022-04-12 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #3 </b>: Available 2022-04-16 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #4 </b>: Available 2022-04-20 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #5 </b>: Available 2022-04-24 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #6 </b>: Available 2022-04-28 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #7 </b>: Available 2022-05-02 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #8 </b>: Available 2022-05-06 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #9 </b>: Available 2022-05-10 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #10 </b>: Available 2022-05-14 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #11 </b>: Available 2022-05-18 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #12 </b>: Available 2022-05-22 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #13 </b>: Available 2022-05-26 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #14 </b>: Available 2022-05-30 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #15 </b>: Available 2022-06-03 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #16 </b>: Available 2022-06-07 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #17 </b>: Available 2022-06-11 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #18 </b>: Available 2022-06-15 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #19 </b>: Available 2022-06-19 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #20 </b>: Available 2022-06-23 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #21 </b>: Available 2022-06-27 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #22 </b>: Available 2022-07-01 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #23 </b>: Available 2022-07-05 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #24 </b>: Available 2022-07-09 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #25 </b>: Available 2022-07-13 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #26 </b>: Available 2022-07-17 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #27 </b>: Available 2022-07-21 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #28 </b>: Available 2022-07-25 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #29 </b>: Available 2022-07-29 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #30 </b>: Available 2022-08-02 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #31 </b>: Available 2022-08-06 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #32 </b>: Available 2022-08-10 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #33 </b>: Available 2022-08-14 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #34 </b>: Available 2022-08-18 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #35 </b>: Available 2022-08-22 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #36 </b>: Available 2022-08-26 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #37 </b>: Available 2022-08-30 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #38 </b>: Available 2022-09-03 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #39 </b>: Available 2022-09-07 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #40 </b>: Available 2022-09-11 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #41 </b>: Available 2022-09-15 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #42 </b>: Available 2022-09-19 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #43 </b>: Available 2022-09-23 · Not yet claimed</figcaption> </figure>
 
 
 <footer>
