@@ -1,7 +1,7 @@
 ---
 title: "Centering and Scaling Your Generative Art"
 date: 2022-01-23
-draft: false
+draft: true
 ---
 
 There's something unique to generative art when it comes deciding how to frame
@@ -11,7 +11,7 @@ your subject:
    to adapt your generative art to the screen it's shown on.
 2. Scaling, cropping, and shifting your art to fit a frame must be done
    programatically. In some cases, the generative systems are chaotic and
-   unpredicatable, meaning a 
+   unpredicatable, making the 
 
 Recently, in particular on [fx(hash)](https://fxhash.xyz), I've seen a lot of
 struggle around getting artwork to scale to a variety of screen sizes.

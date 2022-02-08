@@ -10,6 +10,9 @@ the <a aria-describedby="footnote-label" href="#pen-lift-servo">servo</a>
 lifting the pen can break... but the most nailbiting is watching the plotter
 repeatedly cover the same spot in ink until the page tears!
 
+<br>
+<br>
+
 <figure class="art">
   <img src="/img/posts/plotter-heatmaps/failed-plot.webp" alt="Plot with torn paper">
   <figcaption>Circled in red you can see where the paper tore while plotting

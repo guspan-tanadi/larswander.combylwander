@@ -230,6 +230,13 @@ figure.wide {
     padding: 15px;
 }
 
+.med-wide img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .wide img {
     width: 100%;
     display: block;
@@ -299,7 +306,6 @@ figure.art {
         border-right: 1px solid lightgrey;
         border-bottom: 1px solid lightgrey;
         border-left: 0px solid lightgrey;
-        border-radius: 6px;
         max-width: 100%;
     }
 }
@@ -329,11 +335,11 @@ figure.explain {
     padding-right: 30px;
     margin-top: 10px;
     margin-left: 20px;
-    border-left: 1px solid lightgrey;
+    margin-right: 20px;
     max-width: 50%;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 750px) {
     figure.explain {
         flex-direction: column;
     }
@@ -341,16 +347,17 @@ figure.explain {
     .explain img {
         width: 100%;
         max-width: 90%;
-        margin: 10px;
+        margin-left: 13px;
     }
 
     .explain figcaption {
         padding-top: 10px;
         padding-left: 10px;
+        padding-bottom: 5px;
         margin-top: 0;
         margin-left: 0;
         margin-right: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         border-left: 1px solid lightgrey;
         border-top: 1px solid lightgrey;
         max-width: 100%;
@@ -416,6 +423,10 @@ blockquote {
 .thumbnail-grid {
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
 
 .thumbnail-grid-item {

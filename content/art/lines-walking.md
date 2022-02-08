@@ -1,31 +1,70 @@
 ---
-title: Lines, Walking
+title: Lines Walking
 date: 2022-01-09
 summary: First long-form plotter series. Released on Plottables.
 thumbnails: [/img/art/lines-walking/high-res/localhost-1-plot-1.jpg]
 draft: false
 ---
 
-"Lines, Walking" is a
+"Lines Walking" is a
 "[long-form](https://tylerxhobbs.com/essays/2021/the-rise-of-long-form-generative-art)"
-generative series of 99 pieces made for the pen-plotter. The project was
-published on [plottables](https://plottables.io/project/4) on February 9th.
+generative series of 44 pieces made for the pen-plotter. The project is
+published on [Plottables](https://plottables.io/project/4).
 
-Each edition of 99 is generated from a single piece of computer code, and
-tokenized for ownership. Each edition will be plotted <a
-aria-describedby="footnote-label" href="#at-most-once"><i>at most once</i>
-</a>. It's up to the owners of the tokens to decide how to transfer ownership
-of the physical pieces (but I encourage them to keep the physical & digital
-copies together).
+Each edition of 44 is generated from a single piece of computer code, and is
+tokenized for ownership. In addition, each edition will be plotted <a
+aria-describedby="footnote-label" href="#at-most-once">once
+</a>, and will be made available to its owner for the price of shipping. 
 
-Each token's plot will be sent to its owner for _only the cost of
-shipping_. Each plot will be made available on a date depending on
-it's edition number. A detailed schedule can be found [at the bottom of this
-page](#schedule).
+Once all editions are plotted, each "Lines Walking" has a physical and digital
+instantiation; I strongly encourage owners to keep these together as they are
+separate representations of the same piece.
+
+This piece is a study of the interaction of simple rules, relying heavily on 
+repetition to highlight how complex and subtle these interactions become.
 
 <figure class="wide">
   <img src="/img/art/lines-walking/high-res/localhost-1-plot-1.jpg">
+  <figcaption>A plot of testnet mint #0. <br><br>
+    <a href="/img/art/lines-walking/high-res/localhost-1-plot-1.jpg">high-res</a>
+  </figcaption>
+
 </figure>
+
+## All Outputs are Plotted
+
+Over the past few years while creating plotter artwork, I've grown to really
+appreciate the physicality of the plotter's output. There is something magical
+about the way the plotter translates computer instructions into a real-world
+image. The same can't be said when using an LCD screen or inkjet
+printer for example, even if these devices are also "just" translating computer
+instructions into an image. 
+
+Plotting a piece in watercolor adds another level to this magic. The ultra-high
+precision of the plotter is a strange but wonderful complement to the
+unpredictability of watercolor paint. When done right, the output sits at a
+surreal intersection between human and machine.
+
+As a result, each edition of "Lines Walking" will be plotted and given to the
+owner for the price of shipping. However, the plots won't be available
+immediately after minting; it can take hours to complete just a single
+color, and if any mistakes occur, the plot needs to be restarted from scratch.
+To accomodate this, plots will be made available one-by-one on a fixed
+schedule.
+
+<br>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Very slow... But the
+best way to get consistent brush strokes <a
+href="https://twitter.com/hashtag/plottertwitter?src=hash&amp;ref_src=twsrc%5Etfw">#plottertwitter</a>
+<a
+href="https://twitter.com/hashtag/watercolor?src=hash&amp;ref_src=twsrc%5Etfw">#watercolor</a>
+<a href="https://t.co/XyfM7hEOGo">pic.twitter.com/XyfM7hEOGo</a></p>&mdash;
+Lars Wander (@larswander) <a
+href="https://twitter.com/larswander/status/1487866417840074759?ref_src=twsrc%5Etfw">January
+30, 2022</a></blockquote> <script async
+src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<br>
+
 
 ## What's Being Drawn
 
@@ -35,7 +74,11 @@ fact that this emergent complexity exists is no longer a surprise these days.
 However, _where_ this complexity exists, and _how_ it is expressed can be
 wonderful to discover.
 
-The core idea behind "Lines, Walking" is as follows: Lines advance on a
+It's by no means necessary to understand what the code is doing in generative
+art to appreciate it, but I strongly believe that even having only a high-level
+understanding of the code behind a piece of art enhances it.
+
+The core idea behind "Lines Walking" is as follows: Lines advance on a
 hexagonal grid, traveling from one neighboring cell to the next. If they reach
 a cell on the grid that's already occupied, they change direction using a
 programmed rule to find their next cell. If all of their options are exhausted,
@@ -43,8 +86,20 @@ or they've traveled a predefined number of steps, they stop advancing.
 
 To make that a little clearer, let's use some diagrams:
 
+<br>
+
 <figure class="explain">
-<svg viewBox="0 1 100 93">
+<figcaption>
+Here is a 4x4 grid of hexagonal cells. Each cell is adjacent to 6 others in the
+grid. The cells on the
+top, left, right, and bottom boundaries of the grid "wrap" around and are
+adjacent with the cells on the opposite side.<br><br>
+There is a arrow pointing in the direction of our first line in <span
+style="color:#00897b">green</span>, and a circle denoting the starting
+point. Let's advance it
+a few steps to see where it ends up.
+</figcaption>
+<svg viewBox="-4 1 100 93">
   <defs>
     <g id="hex">
       <polygon fill="none" stroke="lightgrey" stroke-width="0.3" points="5,-9 -5,-9 -10,0 -5,9 5,9 10,0" />
@@ -79,20 +134,19 @@ To make that a little clearer, let's use some diagrams:
   <circle cx="35" cy="50" r="0.9" fill="#00897b"/>
   <line x1="35" y1="50" x2="37" y2="48.5" marker-end="url(#arrowhead-1)" stroke="#00897b" stroke-width="0.8"/>
 </svg>
-<figcaption>
-Here is a 4x4 grid of hexagonal cells. Each cell is adjacent to 6 others in the
-grid. The cells on the
-top, left, right, and bottom boundaries of the grid "wrap" around and are
-adjacent with the cells on the opposite side.<br><br>
-There is a arrow pointing in the direction of our first line in <span
-style="color:#00897b">green</span>, and a circle denoting the stexplaining
-point. Let's advance it
-a few steps to see where it ends up.
-</figcaption>
 </figure>
 
 <figure class="explain">
-<svg viewBox="0 1 100 93">
+<figcaption>
+After 1 step the line has traveled to its immediate neighbor. The
+<b><code>Rule</code></b> feature controls how a line changes direction from one
+step to the next. For this example, the <span
+style="color:#00897b">green</span> line is following <b><code>Rule:
+A</code></b>, meaning it will continue in the same direction until it
+reaches an obstacle. <b><code>Rule</code></b> and other features are explained
+in more detail <a href="#features">below</a>.
+</figcaption>
+<svg viewBox="-4 1 100 93">
   <defs>
     <g id="hex">
       <polygon fill="none" stroke="lightgrey" stroke-width="0.3" points="5,-9 -5,-9 -10,0 -5,9 5,9 10,0" />
@@ -127,19 +181,15 @@ a few steps to see where it ends up.
   <circle cx="35" cy="50" r="0.9" fill="#00897b"/>
   <line x1="35" y1="50" x2="50" y2="41" marker-end="url(#arrowhead-1)" stroke="#00897b" stroke-width="0.8"/>
 </svg>
-<figcaption>
-After 1 step the line has traveled to its immediate neighbor. The
-<b><code>Rule</code></b> feature controls how a line changes direction from one
-step to the next. For this example, the <span
-style="color:#00897b">green</span> line is following <b><code>Rule:
-A</code></b>, meaning it it will continue in the same direction until it
-reaches an obstacle. <b><code>Rule</code></b> and other features are explained
-more <a href="#features">below</a>
-</figcaption>
 </figure>
 
 <figure class="explain">
-<svg viewBox="0 1 100 93">
+<figcaption>
+After 2 steps, the line arrives at the edge of the grid. Instead of treating
+the edge as a boundary, we "wrap" around to the corresponding cell on the
+opposite side.
+</figcaption>
+<svg viewBox="-4 1 100 93">
   <defs>
     <g id="hex">
       <polygon fill="none" stroke="lightgrey" stroke-width="0.3" points="5,-9 -5,-9 -10,0 -5,9 5,9 10,0" />
@@ -174,15 +224,19 @@ more <a href="#features">below</a>
   <circle cx="35" cy="50" r="0.9" fill="#00897b"/>
   <line x1="35" y1="50" x2="65" y2="32" marker-end="url(#arrowhead-1)" stroke="#00897b" stroke-width="0.8"/>
 </svg>
-<figcaption>
-After 2 steps, the line arrives at the edge of the grid. Instead of treating
-the edge as a boundary, we "wrap" around to the corresponding cell on the
-opposite side.
-</figcaption>
 </figure>
 
 <figure class="explain">
-<svg viewBox="0 1 100 93">
+<figcaption>
+The line has wrapped around to the left-hand side of the grid and continues in
+the same direction. This also has an impact on the plotting: for this
+algorithm, the plotter will only refill paint at the start of a line. If a line
+is broken into many segments like in this example, paint will only be applied
+before the first segment is drawn.<br><br>
+To make things more interesting, let's see what happens when multiple lines
+advance on the same grid.
+</figcaption>
+<svg viewBox="-4 1 100 93">
   <defs>
     <g id="hex">
       <polygon fill="none" stroke="lightgrey" stroke-width="0.3" points="5,-9 -5,-9 -10,0 -5,9 5,9 10,0" />
@@ -218,19 +272,30 @@ opposite side.
   <line x1="35" y1="50" x2="72.3" y2="27.5" stroke="#00897b" stroke-width="0.8"/>
   <line x1="12.3" y1="27.5" x2="20" y2="23" marker-end="url(#arrowhead-1") stroke="#00897b" stroke-width="0.8"/>
 </svg>
-<figcaption>
-The line has wrapped around to the left-hand side of the grid and continues
-in the same direction. To make things more interesting, let's see what happens
-when multiple lines advance on the same grid.
-</figcaption>
 </figure>
 
+<br>
+
 The majority of the diversity in output from this program stems from the
-choice of stexplaining coordinates and directions. Let's see what happens when we
-stexplain with just 2 lines.
+choice of starting coordinates and directions. Let's see what happens when we
+start with just 2 lines.
+
+<br>
 
 <figure class="explain">
-<svg viewBox="0 1 100 93">
+<figcaption>
+Using the same 4x4 hexagonal grid, let's add a second line in <span
+style="color:#f06292">pink</span> in the path of our existing <span
+style="color:#00897b">green</span> line. If both lines just go straight,
+there will be a collision.<br><br>
+The <b><code>Rule</code></b> feature controls how lines
+respond to occupied cells. The <b><code>Rule: A</code></b> trait
+requires a line to advance in one direction until the next cell in front of it
+is occupied. At that point, the line "turns left" until it either finds an
+unoccupied neighboring cell, or it is finished advancing. <br><br>
+Let's see what happens using these rules.
+</figcaption>
+<svg viewBox="-4 1 100 93">
   <defs>
     <g id="hex">
       <polygon fill="none" stroke="lightgrey" stroke-width="0.3" points="5,-9 -5,-9 -10,0 -5,9 5,9 10,0" />
@@ -270,22 +335,16 @@ stexplain with just 2 lines.
   <line x1="35" y1="50" x2="37" y2="48.5" marker-end="url(#arrowhead-1)" stroke="#00897b" stroke-width="0.8"/>
   <line x1="65" y1="32" x2="63" y2="30.5" marker-end="url(#arrowhead-2)" stroke="#f8bbd0" stroke-width="0.8"/>
 </svg>
-<figcaption>
-Using the same 4x4 hexagonal grid, let's add a second line in <span
-style="color:#f06292">pink</span> in the path of our existing <span
-style="color:#00897b">green</span> line. If both lines just go straight,
-there will be a collision.<br><br>
-The <b><code>Rule</code></b> feature controls how lines
-respond to occupied cells. The <b><code>Rule: A</code></b> trait
-requires a line to advance in one direction until the next cell in front of it
-is occupied. At that point, the line "turns left" until it either finds an
-unoccupied neighboring cell, or it is finished advancing. <br><br>
-Let's see what happens using these rules.
-</figcaption>
 </figure>
 
 <figure class="explain">
-<svg viewBox="0 1 100 93">
+<figcaption>
+The <span style="color:#00897b">green</span> line has turned left and
+continues in its new direction. Both lines are going to wrap around the grid
+before having to turn again. Let's skip ahead to see where they wind up after a
+few more steps.
+</figcaption>
+<svg viewBox="-4 1 100 93">
   <defs>
     <g id="hex">
       <polygon fill="none" stroke="lightgrey" stroke-width="0.3" points="5,-9 -5,-9 -10,0 -5,9 5,9 10,0" />
@@ -326,16 +385,15 @@ Let's see what happens using these rules.
   <line x1="50" y1="41" x2="35" y2="32" marker-end="url(#arrowhead-1)" stroke="#00897b" stroke-width="0.8"/>
   <line x1="65" y1="32" x2="35" y2="14" marker-end="url(#arrowhead-2)" stroke="#f8bbd0" stroke-width="0.8"/>
 </svg>
-<figcaption>
-The <span style="color:#00897b">green</span> line has turned left and
-continues in its new direction. Both lines are going to wrap around the grid
-before having to turn again. Let's skip ahead to see where they wind up after a
-few more steps.
-</figcaption>
 </figure>
 
 <figure class="explain">
-<svg viewBox="0 1 100 93">
+<figcaption>
+After seven steps both lines are stuck. It just so happens that every cell was
+visited in the process. To render the image in the style of "Lines Walking",
+let's remove the hexagonal grid and arrowheads, and apply curves to the sharp corners.
+</figcaption>
+<svg viewBox="-4 1 100 93">
   <defs>
     <g id="hex">
       <polygon fill="none" stroke="lightgrey" stroke-width="0.3" points="5,-9 -5,-9 -10,0 -5,9 5,9 10,0" />
@@ -382,23 +440,18 @@ few more steps.
   <line x1="50" y1="59" x2="72.5" y2="45.5" stroke="#f8bbd0" stroke-width="0.8"/>
   <line x1="12.5" y1="45.5" x2="20" y2="41" marker-end="url(#arrowhead-2)" stroke="#f8bbd0" stroke-width="0.8"/>
 </svg>
-<figcaption>
-After seven steps both lines are stuck. It just so happens that every cell was
-visited in the process. To render the image in the style of "Lines, Walking",
-lets remove the hexagonal grid, arrows, and apply curves to the sharp corners.
-</figcaption>
 </figure>
 
 <figure class="explain">
 <figcaption>
 This is the completed image. Using just 16 cells and 2 lines, an
-appealing pattern emerges. "Lines, Walking" uses a <a
+appealing pattern emerges. "Lines Walking" uses a <a
 aria-describedby="footnote-label" href="#grid-size">96x120
 </a> grid of hexagons,
 and 100s of lines initialized according to a regular pattern to explore
 these patterns at scale.
 </figcaption>
-<svg viewBox="0 1 100 93">
+<svg viewBox="-4 1 100 93">
   <path d="M35,50 Q50,41, 35,32" fill="none" stroke="#00897b" stroke-width="2" stroke-linecap="round"/>
   <line x1="35" y1="32" x2="12.5" y2="18.5" stroke="#00897b" stroke-width="2" stroke-linecap="round"/>
   <line x1="72.5" y1="18.5" x2="57.5" y2="9.5" stroke="#00897b" stroke-width="2" stroke-linecap="round"/>
@@ -413,25 +466,38 @@ these patterns at scale.
 </figure>
 
 <br>
+<br>
 
 To see how this works with hundreds of lines, I've animated the process for a
 few test mints:
 
-<figure class="wide">
+<br>
+<br>
+
+<figure class="med-wide">
 <img src="/img/art/lines-walking/ani/steps1.gif"/>
 </figure>
 
-<figure class="wide">
+<br>
+<br>
+
+<figure class="med-wide">
 <img src="/img/art/lines-walking/ani/steps2.gif"/>
 </figure>
 
-<figure class="wide">
+<br>
+<br>
+
+<figure class="med-wide">
 <img src="/img/art/lines-walking/ani/steps3.gif"/>
 </figure>
 
+<br>
+<br>
+
 ### Why Hexagons?
 
-"Lines, Walking" started in the early Winter of 2021 on a square grid with
+"Lines Walking" started in the early Winter of 2021 on a square grid with
 borders around the edges. I really liked the aesthetic of the square grid, but
 quickly discovered that having the edges "wrap" around produced much more
 interesting results, as it breaks up a single line into many segments that
@@ -441,10 +507,12 @@ The square grid was wonderful for drawing abstract forms with very long lines
 and pronounced curves. The plots I made with pen and a square grid are still
 some of my favorites:
 
+<br>
+
 <figure class="wide">
   <img src="/img/art/lines-walking/high-res/original-1.jpg">
   <figcaption>
-    Early "Lines, Walking" on a square grid<br><br>Spring 2021
+    Early "Lines Walking" on a square grid<br><br>Spring 2021 ·
     <a href="/img/art/lines-walking/high-res/original-1.jpg">high-res</a>
   </figcaption>
 </figure>
@@ -455,16 +523,18 @@ However, I discovered that unlike on the square grid, placing the lines at
 regular intervals on a hexagonal grid resulted in intricate, nestled, and
 diverse patterns. The amount of variety in the images that came from only small
 tweaks in the program's parameters was very exciting, and I spent many hours
-looking at its different outputs. 
+looking at its different outputs.
 
 By the nature of the hexagonal grid, the figures drawn by the lines often look
 like they are rendered isometrically. This gives many of the outputs a strange,
 and slightly surreal feeling of perspective.
 
+<br>
+
 <figure class="wide">
   <img src="/img/art/lines-walking/high-res/original-3.jpg">
   <figcaption>
-    "Lines, Walking" on a hexagonal grid<br><br>Spring 2021.
+    "Lines Walking" on a hexagonal grid<br><br>Spring 2021 ·
     <a href="/img/art/lines-walking/high-res/original-3.jpg">high-res</a>
   </figcaption>
 </figure>
@@ -487,7 +557,7 @@ love it when properties of a generative system are made visual like this.
 It's important to me that the outputs of this program are all plotted, and
 don't exist only as SVGs. This,
 coupled with the slow paint strokes of the plotter are why the edition count is
-slow "low" compared to many other long-form generative pieces.
+so "low" compared to many other long-form generative pieces. 
 
 <br>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Watercolor lines that
@@ -515,7 +585,7 @@ test prints.
     A small sample of the test prints produced while iterating on the colors &
     algorithm.<br><br>
     I found that approximating colors in RGB space on a monitor was never a
-    proper replacement for actually plotting them. 
+    proper replacement for actually plotting them.
   </figcaption>
 </figure>
 
@@ -531,83 +601,70 @@ the repetition across the canvas, as well as highlight where the repetition
 breaks down. You'll find many similar lines drawn in a single color, and easily
 be able to pick out where they deviate from their pattern.
 
-<br>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Very slow... But the
-best way to get consistent brush strokes <a
-href="https://twitter.com/hashtag/plottertwitter?src=hash&amp;ref_src=twsrc%5Etfw">#plottertwitter</a>
-<a
-href="https://twitter.com/hashtag/watercolor?src=hash&amp;ref_src=twsrc%5Etfw">#watercolor</a>
-<a href="https://t.co/XyfM7hEOGo">pic.twitter.com/XyfM7hEOGo</a></p>&mdash;
-Lars Wander (@larswander) <a
-href="https://twitter.com/larswander/status/1487866417840074759?ref_src=twsrc%5Etfw">January
-30, 2022</a></blockquote> <script async
-src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<br>
-
 ### DIY
 
 > Despite offering a plot of each edition, I hope people try to plot these at
 > home! This section is for those brave plotters who want to do it themselves.
 
 There are two competing approaches to creating watercolor plots, and it stems
-from the need to load your brush with paint. 
+from the need to load your brush with paint.
 
 In the first approach, as long as you know where your paint wells are, you can
-embed brush stroke paths into final plotter file (i.e. SVG) as the piece is
-rendered. This is what Licia He does, you can see this in the PlotterFile by
-Licia He in the "C" shapes were paint refills occur:
+embed brush stroke paths into the final plotter file (i.e. SVG) as the piece is
+rendered. This is what Licia He does, and you can see this in her PlotterFile in
+the "C" shapes were paint refills occur:
 
 <figure class="wide">
   <img src="/img/art/lines-walking/svg/licia-he.svg">
   <figcaption>
-    Made by Licia He, 
+    Made by Licia He,
     <a href="https://plotterfiles.com/profile/files/d9382a20-1044-41f6-b0e2-6aef7e81e024">PlotterFiles</a>
   </figcaption>
 </figure>
 
 The alternative approach is to ignore the paint wells when the plot is
 generated, and instead determine when and how to load the brush at plot-time.
-As a result, only the paths used to draw the image are included in each "Lines,
-Walking" SVG.  This is the approach I chose, mainly for the flexibility as well
-as for how it fits into my current plotter workflow.
+This is the approach I chose, mainly for the flexibility as well as for how it
+fits into my current plotter workflow.  As a result, only the paths used to
+draw the image are included in each "Lines Walking" SVG.
 
 One upside to this approach is that you can just as easily plot this in pen, or
 even better, in marker. I don't have any colored markers (beyond a few
 sharpies), so I would love it if someone could plot one of these for themselves
-in marker and share a picture.
+in marker and share a picture (#lineswalking).
 
 The downside is that if you do want to plot in watercolor, you will need to
-write some custom code. Here is a very high-level approach to get you started: 
+write some custom code. Here is a very high-level approach to get you started:
 
 1. Each layer (`<g>` tag) in the SVG has a `class` attribute corresponding to
    the [Windsor & Newton](https://www.winsornewton.com/) paint used. As
    mentioned above, each paint is mixed to a "regular", and "lighter" opacity.
    The "lighter" opacity is denoted with `-faint` in the layer's `class`
    attribute.
-2. For every `<polyline>` in that layer, insert a `<circle>` with its center
+2. Before every `<polyline>` in each layer, insert a `<circle>` with its center
    (`cx`, `cy`) on the target paint tray if and only if the the `<polyline>`
-   has class `refill`. This is important, as paint is not applied to the brush
-   if it corresponds to a single line that's "wrapped" around the page and has
-   traveled from one edge of our hexagonal grid to the next. 
+   has class `refill`. This is important, as paint is only applied at the start
+   of a line, even if it "wraps" around from one side of the hexagonal grid to
+   the other.
 
 If you plot the resulting SVG as normal, the plotter will make a "circle"
 in your paint tray before every line that requires a paint refill.
 
-
 ## Features
 
-Each "Lines, Walking" piece is generated with 6 features.
+Each "Lines Walking" piece is generated with 6 features: __`Rule`__,
+__`Color`__, __`Steps`__, __`Fullness`__, __`Curves`__, __`Breaks`__.
 
 * __`Rule`__ &nbsp; As mentioned [above](#whats-being-drawn), this feature controls how
     lines change direction each step, and what they do when they collide with
     another line. There's an endless number of rules that could be created, but
-    I chose 4 for their visual properties:
+    I chose these 4 for their visual properties:
     <figure class="explain">
       <figcaption>
         <b><code>A</code></b> will always continue in the same direction until
         it collides with another line. Once that happens, it will turn right
         until it finds an empty cell, and continue in that direction. Both pen
-        plots (hexagonal and square) above were plotted with this rule. Its the
+        plots above (hexagonal and square) were plotted with this rule. Its the
         simplest rule of the 4, as it keeps track of no state and turns only
         when a collision happens.
       </figcaption>
@@ -647,7 +704,7 @@ Each "Lines, Walking" piece is generated with 6 features.
     <figure class="explain">
       <figcaption>
         <b><code>Meadow</code></b> is drawn in Viridian, Sap Green, and
-        Permanent Pink. 
+        Permanent Pink.
       </figcaption>
       <img class="inline" src="/img/art/lines-walking/high-res/color-meadow.png">
     </figure>
@@ -673,26 +730,69 @@ Each "Lines, Walking" piece is generated with 6 features.
       <img class="inline" src="/img/art/lines-walking/high-res/color-gold.png">
     </figure>
     <br>
-* __`Steps`__ &nbsp; The value of this features controls how many steps a
-    walker may take.
+* __`Steps`__ and __`Fullness`__ &nbsp; These two feature values work together
+    to determine how many lines to place on the canvas. __`Steps`__ ranges from
+    __`7`__ to __`21`__, and sets a cap on how many times a line can advance from one cell
+    to the next. __`Fullness`__ is one of __`Sparse`__, __`Moderate`__, or
+    __`Packed`__. Given a max step count and target fullness, "Lines Walking"
+    places an appropriate number of lines to achieve that fullness.
     <figure class="explain">
       <figcaption>
-        7 steps
+        Low (<b><code>7</code></b>) step count, with <b><code>Packed</code></b> fullness.
       </figcaption>
-      <img class="inline" src="/img/art/lines-walking/high-res/steps-7.png">
+      <img class="inline"
+      src="/img/art/lines-walking/high-res/steps-short-packed.png">
+    </figure>
+    <figure class="explain">
+      <figcaption>
+        High (<b><code>21</code></b>) step count, with <b><code>Sparse</code></b> fullness.
+      </figcaption>
+      <img class="inline"
+      src="/img/art/lines-walking/high-res/steps-long-sparse.png">
+    </figure>
+* __`Curves`__ is a boolean controlling whether or not lines have curves
+    applied at the corners. When plotting in pen, I find the corners without
+    curves to be too harsh-looking. However, in watercolor they can look quite
+    nice as the thicker strokes and rounded brush help to smooth out the
+    sharper angles.
+    <figure class="explain">
+      <figcaption>
+        <b><code>Curves</code></b> applied.
+      </figcaption>
+      <img class="inline"
+      src="/img/art/lines-walking/high-res/curves-true.png">
+    </figure>
+    <figure class="explain">
+      <figcaption>
+        <b><code>Curves</code></b> not applied.
+      </figcaption>
+      <img class="inline"
+      src="/img/art/lines-walking/high-res/curves-false.png">
+    </figure>
+* __`Breaks`__ is a boolean controlling whether or not the pattern of the
+    initial line placement is uniform or not. When __`true`__, the pattern is
+    modified at least once while lines are placed causing the repetition in the
+    image to break down.
+    <figure class="explain">
+      <figcaption>
+        <b><code>Breaks</code></b> applied.
+      </figcaption>
+      <img class="inline"
+      src="/img/art/lines-walking/high-res/breaks-true.png">
+    </figure>
+    <figure class="explain">
+      <figcaption>
+        <b><code>Breaks</code></b> not applied.
+      </figcaption>
+      <img class="inline"
+      src="/img/art/lines-walking/high-res/breaks-false.png">
     </figure>
 
+## Logistics
 
+For owners of "Lines Walking".
 
-## Who Gets a Plot?
-
-This series was meant to be plotted and appreciated in watercolor, so every
-digital token will be accompanied with a physical plot. However, it won't be
-available immediately after minting. Plotting a
-single piece is very time intensive; it can take hours to just to complete a
-single color, and if any mistakes occur, the plot needs to be restarted from
-scratch. To accomodate this, plots will be made available one-by-one on a fixed
-schedule.
+### Claiming a Plot
 
 To claim a plot, you must be able to prove that you currently own the
 accompanying token (i.e. sign a message with the ETH wallet holding the NFT).
@@ -700,15 +800,62 @@ accompanying token (i.e. sign a message with the ETH wallet holding the NFT).
 A plot can only be claimed _once_ on or after the date it is made available
 according the [schedule](#schedule) below.
 
-Finally, you must cover the cost of shipping by providing me with a valid
-shipping label, or pick up the plot in person.
+Finally, to receive the plot you must cover the cost of shipping by providing
+me with a valid shipping label, or pick up the plot in person.
 
 ### Schedule
 
-| Edition | Date Available | Claimed |
-| -- | -- | -- |
-| 1  | 2022-04-01 | No |
-| 2  | 2022-04-03 | No |
+A new plot is made available every 4 days, starting on 2022-04-04 (April 4th,
+2022). If you sell your token before claiming a plot, you've given up the right
+to claim it.
+
+<br>
+
+<figure class='thumbnail-grid-item'> <figcaption> <b> #1 </b>: Available 2022-04-04 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #2 </b>: Available 2022-04-08 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #3 </b>: Available 2022-04-12 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #4 </b>: Available 2022-04-16 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #5 </b>: Available 2022-04-20 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #6 </b>: Available 2022-04-24 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #7 </b>: Available 2022-04-28 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #8 </b>: Available 2022-05-02 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #9 </b>: Available 2022-05-06 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #10 </b>: Available 2022-05-10 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #11 </b>: Available 2022-05-14 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #12 </b>: Available 2022-05-18 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #13 </b>: Available 2022-05-22 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #14 </b>: Available 2022-05-26 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #15 </b>: Available 2022-05-30 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #16 </b>: Available 2022-06-03 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #17 </b>: Available 2022-06-07 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #18 </b>: Available 2022-06-11 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #19 </b>: Available 2022-06-15 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #20 </b>: Available 2022-06-19 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #21 </b>: Available 2022-06-23 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #22 </b>: Available 2022-06-27 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #23 </b>: Available 2022-07-01 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #24 </b>: Available 2022-07-05 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #25 </b>: Available 2022-07-09 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #26 </b>: Available 2022-07-13 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #27 </b>: Available 2022-07-17 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #28 </b>: Available 2022-07-21 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #29 </b>: Available 2022-07-25 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #30 </b>: Available 2022-07-29 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #31 </b>: Available 2022-08-02 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #32 </b>: Available 2022-08-06 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #33 </b>: Available 2022-08-10 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #34 </b>: Available 2022-08-14 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #35 </b>: Available 2022-08-18 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #36 </b>: Available 2022-08-22 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #37 </b>: Available 2022-08-26 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #38 </b>: Available 2022-08-30 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #39 </b>: Available 2022-09-03 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #40 </b>: Available 2022-09-07 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #41 </b>: Available 2022-09-11 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #42 </b>: Available 2022-09-15 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #43 </b>: Available 2022-09-19 · Not yet claimed</figcaption> </figure>
+<figure class='thumbnail-grid-item'> <figcaption> <b> #44 </b>: Available 2022-09-23 · Not yet claimed</figcaption> </figure>
+
 
 <footer>
   <ol>
@@ -716,9 +863,8 @@ shipping label, or pick up the plot in person.
     under exceptional circumstances (e.g. lost during shipping) will I consider
     replotting a piece.
     </li>
-    <li id="grid-size">These numbers were picked due to the high number of
-    divisors they have and share. This makes finding period patterns of lines
-    much easier.
+	<li id="grid-size">These numbers were picked due to the high number of
+	divisors they have and share.
     </li>
   </ol>
 </footer>
