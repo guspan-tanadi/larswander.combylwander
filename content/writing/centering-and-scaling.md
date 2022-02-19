@@ -1,24 +1,74 @@
 ---
 title: "Centering and Scaling Your Generative Art"
 date: 2022-01-23
-draft: true
+draft: false
 ---
 
-There's something unique to generative art when it comes deciding how to frame
-your subject:
+There are a few things that are unique to generative art when it comes deciding
+how to frame your subject:
 
 1. Screens come in all sorts of shapes and resolutions, and you have the option
-   to adapt your generative art to the screen it's shown on.
-2. Scaling, cropping, and shifting your art to fit a frame must be done
-   programatically. In some cases, the generative systems are chaotic and
-   unpredicatable, making the 
+   to adapt your artwork to the screen it's shown on.
+2. Scaling, cropping, and translating your art to fit your canvas must be done
+   programatically, and sometimes dynamically in response to an unpredictable
+   and chaotic system. 
 
-Recently, in particular on [fx(hash)](https://fxhash.xyz), I've seen a lot of
-struggle around getting artwork to scale to a variety of screen sizes.
-Fortunately, there is a straightfoward solution to this. Unfortunately, it's
-not a drop-in solution and may require restructuring your code a little.
+There are many ways to address these points, and I'll share what I've seen as
+well as what I do for most of my projects in the hopes that helps you with your
+artwork.
 
-Why such a complicated function?
+> Note: For the purpose of this article I'm going to assume that we're
+> rendering artwork in a web browser, and are generating it using Javascript.
+> These techniques are more broadly applicable, but most generative art these
+> days seems to be made using these tools.
+
+## The Alternatives
+
+There are two main alternatives that I've seen people use that I'll describe
+here. While there is no "best" approach, these two alternatives have serious
+drawbacks that I'll discuss.
+
+### Fixed Resolution(s)
+
+The most common (and arguably easiest) solution to this problem is to hard-code
+one or more supported resolutions. For example, you set a fixed height and
+width for your canvas of say 1,000 by 1,000px, and then support "high
+resolution" exports of 5,000 by 5,000px.
+
+On one hand, this avoids the problem of figuring out how to make your artwork
+adapt to different screen sizes. Web browsers are quite adept at downscaling
+content, so as long as you pick a large-enough initial resolution, your artwork
+will look good on a variety of screen sizes.
+
+On the other hand, it has a few drawbacks:
+
+1. There is now a "max" resolution that your artwork can be exported at without
+   intervention in the underlying code. If someone wants a massive 100,000
+   by 100,000px render for a mural, they are out of luck.
+2. Your artwork can't depend on pixel-perfect rendering as the browser will
+   rescale your canvas.
+3. It doesn't really solve the problem of centering your artwork with
+   consistent margins. There are quite a few pieces on fx(hash) for example
+   which use a fixed output resolution, and have slightly off-center contents.
+
+### Unit Coordinates
+
+Another approach I see mentioned often is to use "unit coordinates", and to
+rescale all your draw calls by the number of pixels in your target canvas. What
+this means is to assign fractional coordinates between 0 and 1 for all elements
+in your scene, and then to multiply those coordinates by a constant to scale
+them onto a range of screen sizes.
+
+On the positive side, this is a lot more flexible than "Fixed Resolution(s)"
+approach as it allows you scale to any (square) resolution. 
+
+On the other hand, it also has a few drawbacks:
+
+1. Not all generative systems are easy to map onto unit coordinates. 
+
+## Motiviation
+
+Say you have a generative system that 
 
 ## TL;DR
 
