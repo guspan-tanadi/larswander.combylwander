@@ -852,7 +852,7 @@ to claim it.
 href='https://plottables.io/token/4000000'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000000'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000000/svg'
-target='_blank'>SVG</a> · Available 2022-04-04 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Available 2022-04-04 · Claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #1 </b>: <a
 href='https://plottables.io/token/4000001'>Plottables</a> · <a
