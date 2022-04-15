@@ -1,7 +1,7 @@
 ---
 title: "Centering and Scaling Your Generative Art"
 date: 2022-01-23
-draft: false
+draft: true
 ---
 
 There are a few things that are unique to generative art when it comes deciding

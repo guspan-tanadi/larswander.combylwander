@@ -826,7 +826,7 @@ To claim a plot, you must be able to prove that you currently own the
 accompanying token (i.e. sign a message with the ETH wallet holding the NFT).
 
 > I recommend using https://app.mycrypto.com/sign-message or similar to sign a
-> message stating how you'd like to recieve your plot (e.g. "My shipping
+> message stating how you'd like to receive your plot (e.g. "My shipping
 > address is X").
 
 A plot can only be claimed _once_ on or after the date it is made available
@@ -885,7 +885,7 @@ target='_blank'>SVG</a> · Not yet claimed</figcaption>
 href='https://plottables.io/token/4000004'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000004'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000004/svg'
-target='_blank'>SVG</a> · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #5 </b>: <a
 href='https://plottables.io/token/4000005'>Plottables</a> · <a
@@ -897,7 +897,7 @@ target='_blank'>SVG</a> · Not yet claimed</figcaption>
 href='https://plottables.io/token/4000006'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000006'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000006/svg'
-target='_blank'>SVG</a> · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #7 </b>: <a
 href='https://plottables.io/token/4000007'>Plottables</a> · <a
@@ -951,7 +951,7 @@ target='_blank'>SVG</a> · Not yet claimed</figcaption>
 href='https://plottables.io/token/4000015'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000015'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000015/svg'
-target='_blank'>SVG</a> · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #16 </b>: <a
 href='https://plottables.io/token/4000016'>Plottables</a> · <a
@@ -1047,7 +1047,7 @@ target='_blank'>SVG</a> · Not yet claimed</figcaption>
 href='https://plottables.io/token/4000031'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000031'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000031/svg'
-target='_blank'>SVG</a> · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #32 </b>: <a
 href='https://plottables.io/token/4000032'>Plottables</a> · <a
@@ -1059,7 +1059,7 @@ target='_blank'>SVG</a> · Not yet claimed</figcaption>
 href='https://plottables.io/token/4000033'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000033'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000033/svg'
-target='_blank'>SVG</a> · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #34 </b>: <a
 href='https://plottables.io/token/4000034'>Plottables</a> · <a
@@ -1077,7 +1077,7 @@ target='_blank'>SVG</a> · Not yet claimed</figcaption>
 href='https://plottables.io/token/4000036'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000036'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000036/svg'
-target='_blank'>SVG</a> · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #37 </b>: <a
 href='https://plottables.io/token/4000037'>Plottables</a> · <a
@@ -1119,7 +1119,7 @@ target='_blank'>SVG</a> · Not yet claimed</figcaption>
 href='https://plottables.io/token/4000043'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000043'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000043/svg'
-target='_blank'>SVG</a> · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Claimed</figcaption>
 </figure>
 
 
