@@ -819,16 +819,21 @@ For owners of "Lines Walking".
 ### Claiming a Plot
 
 > You can contact me via direct message on 
-> [Twitter](https://twitter.com/larswander).
+> [Twitter](https://twitter.com/larswander), or on the Plottables
+> [discord](https://discord.gg/umEbqdFxQv).
 
 To claim a plot, you must be able to prove that you currently own the
 accompanying token (i.e. sign a message with the ETH wallet holding the NFT).
 
+> I recommend using https://app.mycrypto.com/sign-message or similar to sign a
+> message stating how you'd like to recieve your plot (e.g. "My shipping
+> address is X").
+
 A plot can only be claimed _once_ on or after the date it is made available
 according the [schedule](#schedule) below.
 
-Finally, to receive the plot you must cover the cost of shipping by providing
-me with a valid shipping label, or pick up the plot in person.
+Finally, you can receive the plot by picking it up in person (in Manhattan), or
+have it shipped. I will cover the cost of shipping to the lower 48 US states.
 
 ### Plot Size & Details
 
@@ -842,8 +847,12 @@ The frame I used in the topmost picture can be found
 
 ### Schedule
 
-A new plot is made available every 4 days, starting on 2022-04-04 (April 4th,
-2022). If you sell your token before claiming a plot, you've given up the right
+~~A new plot is made available every 4 days, starting on 2022-04-04 (April 4th,
+2022).~~ (The plots were finished early, so I'm letting everyone claim their
+plots according to their own schedule).
+
+All plots are available to claim starting Friday, April 15th 2022.
+If you sell your token before claiming a plot, you've given up the right
 to claim it.
 
 <br>
@@ -852,265 +861,265 @@ to claim it.
 href='https://plottables.io/token/4000000'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000000'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000000/svg'
-target='_blank'>SVG</a> · Available 2022-04-04 · Claimed</figcaption>
+target='_blank'>SVG</a> · Claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #1 </b>: <a
 href='https://plottables.io/token/4000001'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000001'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000001/svg'
-target='_blank'>SVG</a> · Available 2022-04-08 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #2 </b>: <a
 href='https://plottables.io/token/4000002'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000002'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000002/svg'
-target='_blank'>SVG</a> · Available 2022-04-12 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #3 </b>: <a
 href='https://plottables.io/token/4000003'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000003'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000003/svg'
-target='_blank'>SVG</a> · Available 2022-04-16 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #4 </b>: <a
 href='https://plottables.io/token/4000004'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000004'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000004/svg'
-target='_blank'>SVG</a> · Available 2022-04-20 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #5 </b>: <a
 href='https://plottables.io/token/4000005'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000005'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000005/svg'
-target='_blank'>SVG</a> · Available 2022-04-24 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #6 </b>: <a
 href='https://plottables.io/token/4000006'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000006'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000006/svg'
-target='_blank'>SVG</a> · Available 2022-04-28 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #7 </b>: <a
 href='https://plottables.io/token/4000007'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000007'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000007/svg'
-target='_blank'>SVG</a> · Available 2022-05-02 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #8 </b>: <a
 href='https://plottables.io/token/4000008'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000008'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000008/svg'
-target='_blank'>SVG</a> · Available 2022-05-06 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #9 </b>: <a
 href='https://plottables.io/token/4000009'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000009'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000009/svg'
-target='_blank'>SVG</a> · Available 2022-05-10 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #10 </b>: <a
 href='https://plottables.io/token/4000010'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000010'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000010/svg'
-target='_blank'>SVG</a> · Available 2022-05-14 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #11 </b>: <a
 href='https://plottables.io/token/4000011'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000011'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000011/svg'
-target='_blank'>SVG</a> · Available 2022-05-18 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #12 </b>: <a
 href='https://plottables.io/token/4000012'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000012'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000012/svg'
-target='_blank'>SVG</a> · Available 2022-05-22 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #13 </b>: <a
 href='https://plottables.io/token/4000013'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000013'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000013/svg'
-target='_blank'>SVG</a> · Available 2022-05-26 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #14 </b>: <a
 href='https://plottables.io/token/4000014'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000014'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000014/svg'
-target='_blank'>SVG</a> · Available 2022-05-30 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #15 </b>: <a
 href='https://plottables.io/token/4000015'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000015'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000015/svg'
-target='_blank'>SVG</a> · Available 2022-06-03 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #16 </b>: <a
 href='https://plottables.io/token/4000016'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000016'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000016/svg'
-target='_blank'>SVG</a> · Available 2022-06-07 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #17 </b>: <a
 href='https://plottables.io/token/4000017'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000017'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000017/svg'
-target='_blank'>SVG</a> · Available 2022-06-11 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #18 </b>: <a
 href='https://plottables.io/token/4000018'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000018'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000018/svg'
-target='_blank'>SVG</a> · Available 2022-06-15 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #19 </b>: <a
 href='https://plottables.io/token/4000019'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000019'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000019/svg'
-target='_blank'>SVG</a> · Available 2022-06-19 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #20 </b>: <a
 href='https://plottables.io/token/4000020'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000020'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000020/svg'
-target='_blank'>SVG</a> · Available 2022-06-23 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #21 </b>: <a
 href='https://plottables.io/token/4000021'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000021'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000021/svg'
-target='_blank'>SVG</a> · Available 2022-06-27 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #22 </b>: <a
 href='https://plottables.io/token/4000022'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000022'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000022/svg'
-target='_blank'>SVG</a> · Available 2022-07-01 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #23 </b>: <a
 href='https://plottables.io/token/4000023'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000023'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000023/svg'
-target='_blank'>SVG</a> · Available 2022-07-05 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #24 </b>: <a
 href='https://plottables.io/token/4000024'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000024'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000024/svg'
-target='_blank'>SVG</a> · Available 2022-07-09 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #25 </b>: <a
 href='https://plottables.io/token/4000025'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000025'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000025/svg'
-target='_blank'>SVG</a> · Available 2022-07-13 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #26 </b>: <a
 href='https://plottables.io/token/4000026'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000026'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000026/svg'
-target='_blank'>SVG</a> · Available 2022-07-17 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #27 </b>: <a
 href='https://plottables.io/token/4000027'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000027'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000027/svg'
-target='_blank'>SVG</a> · Available 2022-07-21 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #28 </b>: <a
 href='https://plottables.io/token/4000028'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000028'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000028/svg'
-target='_blank'>SVG</a> · Available 2022-07-25 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #29 </b>: <a
 href='https://plottables.io/token/4000029'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000029'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000029/svg'
-target='_blank'>SVG</a> · Available 2022-07-29 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #30 </b>: <a
 href='https://plottables.io/token/4000030'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000030'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000030/svg'
-target='_blank'>SVG</a> · Available 2022-08-02 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #31 </b>: <a
 href='https://plottables.io/token/4000031'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000031'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000031/svg'
-target='_blank'>SVG</a> · Available 2022-08-06 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #32 </b>: <a
 href='https://plottables.io/token/4000032'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000032'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000032/svg'
-target='_blank'>SVG</a> · Available 2022-08-10 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #33 </b>: <a
 href='https://plottables.io/token/4000033'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000033'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000033/svg'
-target='_blank'>SVG</a> · Available 2022-08-14 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #34 </b>: <a
 href='https://plottables.io/token/4000034'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000034'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000034/svg'
-target='_blank'>SVG</a> · Available 2022-08-18 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #35 </b>: <a
 href='https://plottables.io/token/4000035'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000035'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000035/svg'
-target='_blank'>SVG</a> · Available 2022-08-22 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #36 </b>: <a
 href='https://plottables.io/token/4000036'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000036'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000036/svg'
-target='_blank'>SVG</a> · Available 2022-08-26 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #37 </b>: <a
 href='https://plottables.io/token/4000037'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000037'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000037/svg'
-target='_blank'>SVG</a> · Available 2022-08-30 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #38 </b>: <a
 href='https://plottables.io/token/4000038'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000038'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000038/svg'
-target='_blank'>SVG</a> · Available 2022-09-03 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #39 </b>: <a
 href='https://plottables.io/token/4000039'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000039'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000039/svg'
-target='_blank'>SVG</a> · Available 2022-09-07 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #40 </b>: <a
 href='https://plottables.io/token/4000040'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000040'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000040/svg'
-target='_blank'>SVG</a> · Available 2022-09-11 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #41 </b>: <a
 href='https://plottables.io/token/4000041'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000041'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000041/svg'
-target='_blank'>SVG</a> · Available 2022-09-15 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #42 </b>: <a
 href='https://plottables.io/token/4000042'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000042'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000042/svg'
-target='_blank'>SVG</a> · Available 2022-09-19 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #43 </b>: <a
 href='https://plottables.io/token/4000043'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000043'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000043/svg'
-target='_blank'>SVG</a> · Available 2022-09-23 · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Not yet claimed</figcaption>
 </figure>
 
 
