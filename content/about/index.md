@@ -11,8 +11,8 @@ You can find me around the web:
 
 ### Profiles
 
+* [twitter](https://twitter.com/larswander) (most active here)
 * [instagram](https://instagram.com/larswander)
-* [twitter](https://twitter.com/larswander)
 * [hicetnunc](https://hicetnunc.art/larswander)
 * [opensea](https://opensea.io/collection/lars-wander-art)
 * [fxhash](https://www.fxhash.xyz/u/larswander)

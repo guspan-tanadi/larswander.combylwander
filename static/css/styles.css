@@ -412,6 +412,16 @@ blockquote {
   align-items: center;
 }
 
+.absolute {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.padded {
+    padding: 10%;
+}
+
 @media only screen and (max-width: 700px) {
     .grid-2 {
       display: grid;
