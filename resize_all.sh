@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 
-for f in static/img/art/ribbons/high-res/*; do
+SRC=static/img/art/geode/5000x5000/
+TRGT=static/img/art/geode/thumbnail/
+
+mkdir -p $TRGT
+
+for f in ${SRC}*; do
+  echo $f 
   filename=$(basename $f)
-  newpath=static/img/art/ribbons/thumbnail/$filename
+  newpath="${TRGT}$filename"
   convert $f -resize 400x400 $newpath
   ./to_webp.sh $newpath
 done

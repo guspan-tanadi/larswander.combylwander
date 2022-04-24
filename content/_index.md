@@ -50,5 +50,47 @@ I create generative art.
       <br>
     </figure>
   </div>
+
+  <div class="grid-2">
+    <figure class="wide padded">
+      <img src="/img/art/geode/2000x2000/110.webp" alt="Geode 110">
+      <figcaption><b>Geode 110</b> 
+      <br>
+      Polygon packing.
+      <br>
+      <a href="https://www.fxhash.xyz/gentk/slug/geode-110">fxhash</a>
+      </figcaption> 
+    </figure>
+    <figure class="wide padded">
+      <img src="/img/art/geode/2000x2000/208.webp" alt="Geode 208">
+      <figcaption><b>Geode 208</b> 
+      <br>
+      Polygon packing.
+      <br>
+      <a href="https://www.fxhash.xyz/gentk/slug/geode-208">fxhash</a>
+      </figcaption> 
+    </figure>
+  </div>
+
+  <div class="grid-2">
+    <figure class="wide padded">
+      <img src="/img/art/geode/2000x2000/67.webp" alt="Geode 67">
+      <figcaption><b>Geode 110</b> 
+      <br>
+      Polygon packing.
+      <br>
+      <a href="https://www.fxhash.xyz/gentk/slug/geode-67">fxhash</a>
+      </figcaption> 
+    </figure>
+    <figure class="wide padded">
+      <img src="/img/art/geode/2000x2000/207.webp" alt="Geode 207">
+      <figcaption><b>Geode 207</b> 
+      <br>
+      Polygon packing.
+      <br>
+      <a href="https://www.fxhash.xyz/gentk/slug/geode-207">fxhash</a>
+      </figcaption> 
+    </figure>
+  </div>
 </div>
 
