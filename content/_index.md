@@ -44,7 +44,7 @@ I create generative art.
   <div class="centered">
     <figure class="wide">
       <img src="/img/art/ribbons/high-res/R3.jpg" alt="Ribbons">
-      <figcaption><b>SPLAT 3/N</b> 
+      <figcaption><b>Ribbons R3</b> 
       <br>
       Pen plots of virtual ribbons, composed for symmetry.
       <br>
