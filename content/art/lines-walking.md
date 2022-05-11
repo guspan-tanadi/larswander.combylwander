@@ -15,7 +15,7 @@ were minted on February 9th, 2022.
 Each edition of 44 is generated from a single piece of computer code, and is
 tokenized for ownership. In addition, each edition will be plotted <a
 aria-describedby="footnote-label" href="#at-most-once">once
-</a>, and will be made available to its owner for the price of shipping. 
+</a>, and will be made available to its owner for the price of shipping.
 
 Once all editions are plotted, each "Lines Walking" has a physical and digital
 instantiation; I strongly encourage owners to keep these together as they are
@@ -23,7 +23,7 @@ separate representations of the same piece. Owners are welcome to sell their
 digital token without claiming the physical plot. The new owner can claim it
 instead once the plot is available.
 
-This piece is a study of the interaction of simple rules, relying heavily on 
+This piece is a study of the interaction of simple rules, relying heavily on
 repetition to highlight how complex and subtle these interactions become.
 
 <figure class="wide">
@@ -40,7 +40,7 @@ appreciate the physicality of the plotter's output. There is something magical
 about the way the plotter translates computer instructions into a real-world
 image. The same can't be said when using an LCD screen or inkjet
 printer for example, even if these devices are also "just" translating computer
-instructions into an image. 
+instructions into an image.
 
 Plotting a piece in watercolor adds another level to this magic. The ultra-high
 precision of the plotter is a strange but wonderful complement to the
@@ -559,7 +559,7 @@ love it when properties of a generative system are made visual like this.
 It's important to me that the outputs of this program are all plotted, and
 don't exist only as SVGs. This,
 coupled with the slow paint strokes of the plotter are why the edition count is
-so "low" compared to many other long-form generative pieces. 
+so "low" compared to many other long-form generative pieces.
 
 <br>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Watercolor lines that
@@ -818,7 +818,7 @@ For owners of "Lines Walking".
 
 ### Claiming a Plot
 
-> You can contact me via direct message on 
+> You can contact me via direct message on
 > [Twitter](https://twitter.com/larswander), or on the Plottables
 > [discord](https://discord.gg/umEbqdFxQv).
 
@@ -975,7 +975,7 @@ target='_blank'>SVG</a> · Claimed</figcaption>
 href='https://plottables.io/token/4000019'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000019'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000019/svg'
-target='_blank'>SVG</a> · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #20 </b>: <a
 href='https://plottables.io/token/4000020'>Plottables</a> · <a
@@ -987,7 +987,7 @@ target='_blank'>SVG</a> · Not yet claimed</figcaption>
 href='https://plottables.io/token/4000021'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000021'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000021/svg'
-target='_blank'>SVG</a> · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #22 </b>: <a
 href='https://plottables.io/token/4000022'>Plottables</a> · <a
