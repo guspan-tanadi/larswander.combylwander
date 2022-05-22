@@ -891,7 +891,7 @@ target='_blank'>SVG</a> · Claimed</figcaption>
 href='https://plottables.io/token/4000005'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000005'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000005/svg'
-target='_blank'>SVG</a> · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #6 </b>: <a
 href='https://plottables.io/token/4000006'>Plottables</a> · <a
@@ -1017,7 +1017,7 @@ target='_blank'>SVG</a> · Not yet claimed</figcaption>
 href='https://plottables.io/token/4000026'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000026'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000026/svg'
-target='_blank'>SVG</a> · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #27 </b>: <a
 href='https://plottables.io/token/4000027'>Plottables</a> · <a
@@ -1107,7 +1107,7 @@ target='_blank'>SVG</a> · Claimed</figcaption>
 href='https://plottables.io/token/4000041'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000041'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000041/svg'
-target='_blank'>SVG</a> · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #42 </b>: <a
 href='https://plottables.io/token/4000042'>Plottables</a> · <a
