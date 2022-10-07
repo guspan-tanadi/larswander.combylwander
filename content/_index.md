@@ -1,24 +1,29 @@
 ---
-title: "Lars Wander"
 draft: false
 ---
 
-Full-time programmer, part-time plotter.
-
-At work, I do analytics & visualization for Google's storage systems. At home,
-I create generative art.
+<br> <br>
+Welcome to my ☼ art page ☼
 
 <div class="absolute">
-  <div class="centered">
-    <figure class="wide">
-      <img src="/img/art/splat/3.webp" alt="Generative paint splatter">
-      <figcaption><b>SPLAT 3/N</b> 
+  <figure class="wide padded" style="margin-top: 0">
+    <img src="/img/art/how-you-see-me/high-res/how-you-see-me-11.webp">
+    <figcaption>
+      <b>"how you see me" #11</b> 
       <br>
-      An abstract take on paint mixing.
       <br>
-      <a href="https://objkt.com/asset/hicetnunc/548406">objkt.com</a></figcaption> 
-    </figure>
-  </div>
+      <a href="/img/art/how-you-see-me/high-res/how-you-see-me-11.png">high-res</a> · <a href="https://objkt.com/asset/KT1Q6cr9sscJYtL4m9CpVscu2SpqUxe9yZoo/11">objkt</a>
+    </figcaption> 
+  </figure>
+
+  <figure class="wide extra-padded">
+    <img src="/img/art/splat/3.webp" alt="Generative paint splatter">
+    <figcaption><b>SPLAT 3/N</b> 
+    <br>
+    An abstract take on paint mixing.
+    <br>
+    <a href="https://objkt.com/asset/hicetnunc/548406">objkt.com</a></figcaption> 
+  </figure>
 
   <div class="grid-2">
     <figure class="wide padded">
@@ -41,15 +46,13 @@ I create generative art.
     </figure>
   </div>
 
-  <div class="centered">
-    <figure class="wide">
-      <img src="/img/art/ribbons/high-res/R3.jpg" alt="Ribbons">
-      <figcaption><b>Ribbons R3</b> 
-      <br>
-      Pen plots of virtual ribbons, composed for symmetry.
-      <br>
-    </figure>
-  </div>
+  <figure class="wide extra-padded">
+    <img src="/img/art/ribbons/high-res/R3.jpg" alt="Ribbons">
+    <figcaption><b>Ribbons R3</b> 
+    <br>
+    Pen plots of virtual ribbons, composed for symmetry.
+    <br>
+  </figure>
 
   <div class="grid-2">
     <figure class="wide padded">

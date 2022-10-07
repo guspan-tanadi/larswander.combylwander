@@ -3,36 +3,37 @@ title: "About"
 draft: false
 ---
 
-I'm a programmer working at Google, and this is my <a
-aria-describedby="footnote-label" href="#homepage">hompage</a>. Thoughts &
-opinions shared here are mine, and not that of any employer.
+<img style='max-height: 200px; max-width: 200px' src='/img/posts/about/face0-cutout.webp'>
 
-You can find me around the web:
+I'm a programmer and computer artist. At work, I build visualization tools. At
+home, I do a lot of pen plotting. Thoughts & opinions shared here are mine, and
+not that of any employer.
 
-### Profiles
+You can find me on [twitter](https://twitter.com/larswander), and sometimes
+[instagram](https://instagram.com/larswander).
 
-* [twitter](https://twitter.com/larswander) (most active here)
-* [instagram](https://instagram.com/larswander)
-* [hicetnunc](https://hicetnunc.art/larswander)
-* [opensea](https://opensea.io/collection/lars-wander-art)
+### Art
+
+* [objkt](https://objkt.com/profile/larswander/)
+* [verse](https://verse.works/persons/lars-wander)
 * [fxhash](https://www.fxhash.xyz/u/larswander)
+* [plottables](https://opensea.io/collection/lines-walking-by-lars-wander)
 * [foundation](https://foundation.app/@larswander)
-* [github](https://github.com/lwander)
-* [soundcloud](https://soundcloud.com/la-w-nder)
-* [medium](https://medium.com/@larswander/about)
-* [linkedin](https://www.linkedin.com/in/lars-wander-82697897)
+* [my first ERC721 contract](https://opensea.io/collection/lars-wander-art)
 
-### Books, Podcasts, Talks...
+### Not Art
 
+If you're here for professional reasons...
+
+* [LinkedIn](https://www.linkedin.com/in/lars-wander-82697897)
+* [GitHub](https://www.github.com/lwander)
+* [Medium](https://medium.com/@larswander)
 * [Continuous Deliver With
     Spinnaker](https://www.goodreads.com/author/show/18280100.Lars_Wander),
     [O'Reilly](https://www.oreilly.com/library/view/continuous-delivery-with/9781492035527/titlepage01.html)
 * [Continuous Integration and Continuous
     Delivery](https://kubernetespodcast.com/episode/023-ci-and-cd/),
     [Spotify](https://open.spotify.com/episode/1R25ZeiVfKNdZeAxPNp7wJ)
-* [Humans of the Moon: Ep
-    1](https://humans-of-the-moon.webflow.io/episode/ep-1-lars-wander),
-    [Spotify](https://open.spotify.com/show/0ZAUVAx1By8rFkZnrwM1UM)
 * [Spinnaker, Kubernetes & Istio](https://www.youtube.com/watch?v=_ZCtiD_6p7g)
 * [Computer Vision for Road
     Inspection](https://ieeexplore.ieee.org/document/6836111), [pdf](https://www.ri.cmu.edu/pub_files/2014/3/crack_detection_final.pdf)

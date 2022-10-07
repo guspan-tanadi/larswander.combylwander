@@ -57,10 +57,6 @@ code {
     padding-right: 10px;
 }
 
-.topnav-home {
-    font-size: 24px;
-}
-
 a.topnav-home:link {
     text-decoration: none;
 }
@@ -418,15 +414,30 @@ blockquote {
   right: 0;
 }
 
+.reset-style {
+    all: revert;
+}
+
 .padded {
-    padding: 10%;
+    padding: 0 10% 1% 10%;
+}
+
+.extra-padded {
+    padding: 0 25% 1% 25%;
+}
+
+.vert-space {
+    padding: 3% 0 3% 0;
 }
 
 @media only screen and (max-width: 700px) {
     .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr;
-      align-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+    .extra-padded {
+        padding: 0 10% 1% 10%;
     }
 }
 
