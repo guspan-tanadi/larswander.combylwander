@@ -1,7 +1,5 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
   {{ .Content }}
-
 
   {{ range where .Data.Pages "homepage" true }}
   <h2>{{ .Name }}</h2>
