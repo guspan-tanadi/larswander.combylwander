@@ -1011,7 +1011,7 @@ target='_blank'>SVG</a> · Claimed</figcaption>
 href='https://plottables.io/token/4000025'>Plottables</a> · <a
 href='https://opensea.io/assets/0xa319c382a702682129fcbf55d514e61a16f97f9c/4000025'>Open
 Sea</a> · <a href='https://www.plottables.io/api/token/4000025/svg'
-target='_blank'>SVG</a> · Not yet claimed</figcaption>
+target='_blank'>SVG</a> · Claimed</figcaption>
 </figure>
 <figure class='thumbnail-grid-item'> <figcaption> <b> #26 </b>: <a
 href='https://plottables.io/token/4000026'>Plottables</a> · <a
