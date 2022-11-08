@@ -15,53 +15,48 @@
  */
 
 /**
- * Returns a function that translates from user to screen coordinates given the
- * top-left and bottom-right points bounding your draw-area in user
- * coordinates, and the target dimensions and margin in screen coordinates.
+ * Returns a function that translates between the source and destination
+ * coordinate space while preserving the ratio between the input x & y
+ * dimensions.
  *
- * @param {[number, number]} tl - The top-left point of your bounding rect.
- * @param {[number, number]} br - The bottom-right point of your bounding rect.
- * @param {[number, number]} dimensions - The target screen dimensions.
- * @param {[number, number]|number} margin - The (optional) margin to apply,
- *                                           provided in screen coordinates.
+ * @param {[number, number]} stl Top-left point bounding the source.
+ * @param {[number, number]} sbr Bottom-right point bounding the source.
+ * @param {[number, number]} dtl Top-left point bounding the destination.
+ * @param {[number, number]} dbr Bottom-right point bounding the destination.
  */
-function makeCenterFn(tl, br, dimensions, margin = 0.) {
-  margin = typeof margin === 'number' ? [margin, margin] : margin;
+function translateFn(stl, sbr, dtl, dbr) {
+  const [stlx, stly] = stl;
+  const [sbrx, sbry] = sbr;
+  const [dtlx, dtly] = dtl;
+  const [dbrx, dbry] = dbr;
 
-  const [tlx, tly] = tl;
-  const [brx, bry] = br;
-  const [sx, sy] = dimensions;
-  const [mx, my] = margin;
-
-  // Compute the diagonal vector for both user & screen coordinates. 
-  const [userx, usery] = [brx - tlx, bry - tly];
-  const [screenx, screeny] = [sx - mx * 2, sy - my * 2];
+  // Compute the diagonal vector for both bounding rects.
+  const [sdx, sdy] = [sbrx - stlx, sbry - stly];
+  const [ddx, ddy] = [dbrx - dtlx, dbry - dtly];
 
   // Find the minimum amount to scale the user draw-area by to fill the screen.
-  const [ratiox, ratioy] = [screenx / userx, screeny, usery];
-  const scale = Math.min(ratiox, ratioy);
+  const [rx, ry] = [ddx / sdx, ddy / sdy];
+  const a = Math.min(rx, ry);
 
-  // If ratiox !== ratioy, we need to shift our scaled coordinates to the
-  // center of the screen.
-  const [scaledx, scaledy] = [userx * scale, usery * scale];
-  const [tocx, tocy] = [(screenx - scaledx) / 2, (screeny - scaledy) / 2];
-  const [offsetx, offsety] = [tocx + mx, tocy + my];
+  // Compute the translation to the center of the new coordinates, accounting 
+  // for the fact that rx may not equal ry by centering the smaller dimension.
+  const [ox, oy] = [(ddx - sdx * a) * 0.5 + dtlx, (ddy - sdy * a) * 0.5 + dtly];
 
   // At this point, we translate from user to screen coordinates using
-  //     (pt - tl) * scale + offset
-  // We can skip one arithmatic operation if we rewrite that as
-  //     pt * scale - tl * scale + offset
-  // ... and precompute the constants.
-  const [bx, by] = [-tlx * scale + offsetx, -tly * scale + offsety];
+  //     (pt - tl) * a + o
+  // We can skip some arithmatic in our output function by rewriting as
+  //     pt * a - tl * a + o
+  // ... and folding the constants into the form
+  //     pt * a + b
+  const [bx, by] = [-stlx * a + ox, -stly * a + oy];
 
-  // The result is a mapping from user to screen coordinates.
   return (inp) => {
     // Scalar values (such as stroke-width, or radius) are only scaled by a
     // constant, not translated.
     if (typeof inp === 'number') {
-      return inp * scale;
+      return inp * a;
     }
     const [x, y] = inp;
-    return [x * scale + bx, y * scale + by];
+    return [x * a + bx, y * a + by];
   }
 }

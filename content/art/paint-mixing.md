@@ -1,8 +1,8 @@
 ---
 title: "Paint Mixing"
 date: 2021-11-10
-summary: An algorithm to emulate stirred paint.
-thumbnails: [/img/art/splat/high-res/3.webp, /img/art/gentle-dissolution/thumbnail/1.webp]
+summary: Early experiments that lead to "how you see me (2022)".
+thumbnails: [/img/art/splat/high-res/3-crop.webp, /img/art/gentle-dissolution/thumbnail/1-crop.webp]
 draft: false
 ---
 

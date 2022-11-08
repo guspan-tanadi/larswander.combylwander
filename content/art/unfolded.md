@@ -2,7 +2,7 @@
 title: "Unfolded"
 date: 2021-12-12
 summary: Patterns made by folding, and then unfolding a sheet of paper. Released on fx(hash).
-thumbnails: [/img/art/unfolded/thumbnail/347.webp, /img/art/unfolded/thumbnail/109.webp]
+thumbnails: [/img/art/unfolded/thumbnail/347-crop.webp, /img/art/unfolded/thumbnail/109-crop.webp]
 draft: false
 ---
 

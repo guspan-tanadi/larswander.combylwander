@@ -1,8 +1,8 @@
 ---
 title: Lines Walking
 date: 2022-02-09
-summary: First long-form plotter series. Released on Plottables.
-thumbnails: [/img/art/lines-walking/high-res/localhost-1-plot-1.webp, /img/art/lines-walking/high-res/localhost-1-svg-1.webp]
+summary: First long-form plotter series. Each edition plotted and shipped once free. Released on Plottables.
+thumbnails: [/img/art/lines-walking/high-res/localhost-1-svg-1-crop.webp, /img/art/lines-walking/high-res/localhost-1-plot-1-crop.webp]
 draft: false
 ---
 

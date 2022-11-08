@@ -2,7 +2,7 @@
 title: "Geode"
 date: 2022-01-14
 summary: Packing shapes edge-to-edge, and exploring the patterns they create. Released on fx(hash).
-thumbnails: [/img/art/geode/thumbnail/85-margin.webp, /img/art/geode/thumbnail/88-margin.webp]
+thumbnails: [/img/art/geode/thumbnail/85.webp, /img/art/geode/thumbnail/88-margin-crop.webp]
 draft: false
 ---
 

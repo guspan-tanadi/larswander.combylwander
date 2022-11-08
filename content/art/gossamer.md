@@ -2,7 +2,7 @@
 title: "Gossamer"
 date: 2021-11-28
 summary: First long-form generative series. Released on fx(hash).
-thumbnails: [/img/art/gossamer/thumbnail/12-margin.webp, /img/art/gossamer/thumbnail/114-margin.webp]
+thumbnails: [/img/art/gossamer/thumbnail/12.webp, /img/art/gossamer/thumbnail/114.webp]
 draft: false
 ---
 

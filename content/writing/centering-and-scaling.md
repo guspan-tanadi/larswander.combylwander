@@ -1,142 +1,73 @@
 ---
-title: "Centering and Scaling Your Generative Art"
+title: "Centering and Scaling"
 date: 2022-01-23
-draft: true
+draft: true 
 ---
 
-There are a few things that are unique to generative art when it comes deciding
-how to frame your subject:
+The function I'm sharing here is probably my most used piece of code when it
+comes to making generative art. Let me share the code, and then show some
+examples to demonstrate why it's so useful.
 
-1. Screens come in all sorts of shapes and resolutions, and you have the option
-   to adapt your artwork to the screen it's shown on.
-2. Scaling, cropping, and translating your art to fit your canvas must be done
-   programatically, and sometimes dynamically in response to an unpredictable
-   and chaotic system. 
+## Code
 
-There are many ways to address these points, and I'll share what I've seen as
-well as what I do for most of my projects in the hopes that helps you with your
-artwork.
+> I'm releasing this under the 
+> [Apache-2.0 License](https://www.apache.org/licenses/LICENSE-2.0). 
 
-> Note: For the purpose of this article I'm going to assume that we're
-> rendering artwork in a web browser, and are generating it using Javascript.
-> These techniques are more broadly applicable, but most generative art these
-> days seems to be made using these tools.
-
-## The Alternatives
-
-There are two main alternatives that I've seen people use that I'll describe
-here. While there is no "best" approach, these two alternatives have serious
-drawbacks that I'll discuss.
-
-### Fixed Resolution(s)
-
-The most common (and arguably easiest) solution to this problem is to hard-code
-one or more supported resolutions. For example, you set a fixed height and
-width for your canvas of say 1,000 by 1,000px, and then support "high
-resolution" exports of 5,000 by 5,000px.
-
-On one hand, this avoids the problem of figuring out how to make your artwork
-adapt to different screen sizes. Web browsers are quite adept at downscaling
-content, so as long as you pick a large-enough initial resolution, your artwork
-will look good on a variety of screen sizes.
-
-On the other hand, it has a few drawbacks:
-
-1. There is now a "max" resolution that your artwork can be exported at without
-   intervention in the underlying code. If someone wants a massive 100,000
-   by 100,000px render for a mural, they are out of luck.
-2. Your artwork can't depend on pixel-perfect rendering as the browser will
-   rescale your canvas.
-3. It doesn't really solve the problem of centering your artwork with
-   consistent margins. There are quite a few pieces on fx(hash) for example
-   which use a fixed output resolution, and have slightly off-center contents.
-
-### Unit Coordinates
-
-Another approach I see mentioned often is to use "unit coordinates", and to
-rescale all your draw calls by the number of pixels in your target canvas. What
-this means is to assign fractional coordinates between 0 and 1 for all elements
-in your scene, and then to multiply those coordinates by a constant to scale
-them onto a range of screen sizes.
-
-On the positive side, this is a lot more flexible than "Fixed Resolution(s)"
-approach as it allows you scale to any (square) resolution. 
-
-On the other hand, it also has a few drawbacks:
-
-1. Not all generative systems are easy to map onto unit coordinates. 
-
-## Motiviation
-
-Say you have a generative system that 
-
-## TL;DR
-
-the tl;dr
-
-<pre class="hl">
-<span class="hl com">/**</span>
-<span class="hl com"> * Returns a function that translates from user to screen coordinates given the</span>
-<span class="hl com"> * top-left and bottom-right points bounding your draw-area in user</span>
-<span class="hl com"> * coordinates, and the target dimensions and margin in screen coordinates.</span>
+<pre class="hl"><span class="hl com">/**</span>
+<span class="hl com"> * Returns a function that translates between the source and destination</span>
+<span class="hl com"> * coordinate space while preserving the ratio between the input x &amp; y</span>
+<span class="hl com"> * dimensions.</span>
 <span class="hl com"> *</span>
-<span class="hl com"> * &#64;param {[number, number]} tl - The top-left point of your bounding rect.</span>
-<span class="hl com"> * &#64;param {[number, number]} br - The bottom-right point of your bounding rect.</span>
-<span class="hl com"> * &#64;param {[number, number]} dimensions - The target screen dimensions.</span>
-<span class="hl com"> * &#64;param {[number, number]|number} margin - The (optional) margin to apply,</span>
-<span class="hl com"> *                                           provided in screen coordinates.</span>
+<span class="hl com"> * &#64;param {[number, number]} stl Top-left point bounding the source.</span>
+<span class="hl com"> * &#64;param {[number, number]} sbr Bottom-right point bounding the source.</span>
+<span class="hl com"> * &#64;param {[number, number]} dtl Top-left point bounding the destination.</span>
+<span class="hl com"> * &#64;param {[number, number]} dbr Bottom-right point bounding the destination.</span>
 <span class="hl com"> */</span>
-<span class="hl kwa">function</span> <span class="hl kwd">makeCenterFn</span><span class="hl opt">(</span>tl<span class="hl opt">,</span> br<span class="hl opt">,</span> dimensions<span class="hl opt">,</span> margin <span class="hl opt">=</span> <span class="hl num">0</span><span class="hl opt">.) {</span>
-  margin <span class="hl opt">=</span> <span class="hl kwa">typeof</span> margin <span class="hl opt">===</span> <span class="hl str">&apos;number&apos;</span> <span class="hl opt">? [</span>margin<span class="hl opt">,</span> margin<span class="hl opt">] :</span> margin<span class="hl opt">;</span>
+<span class="hl kwa">function</span> <span class="hl kwd">translateFn</span><span class="hl opt">(</span>stl<span class="hl opt">,</span> sbr<span class="hl opt">,</span> dtl<span class="hl opt">,</span> dbr<span class="hl opt">) {</span>
+  <span class="hl kwa">const</span> <span class="hl opt">[</span>stlx<span class="hl opt">,</span> stly<span class="hl opt">] =</span> stl<span class="hl opt">;</span>
+  <span class="hl kwa">const</span> <span class="hl opt">[</span>sbrx<span class="hl opt">,</span> sbry<span class="hl opt">] =</span> sbr<span class="hl opt">;</span>
+  <span class="hl kwa">const</span> <span class="hl opt">[</span>dtlx<span class="hl opt">,</span> dtly<span class="hl opt">] =</span> dtl<span class="hl opt">;</span>
+  <span class="hl kwa">const</span> <span class="hl opt">[</span>dbrx<span class="hl opt">,</span> dbry<span class="hl opt">] =</span> dbr<span class="hl opt">;</span>
 
-  <span class="hl kwa">const</span> <span class="hl opt">[</span>tlx<span class="hl opt">,</span> tly<span class="hl opt">] =</span> tl<span class="hl opt">;</span>
-  <span class="hl kwa">const</span> <span class="hl opt">[</span>brx<span class="hl opt">,</span> bry<span class="hl opt">] =</span> br<span class="hl opt">;</span>
-  <span class="hl kwa">const</span> <span class="hl opt">[</span>sx<span class="hl opt">,</span> sy<span class="hl opt">] =</span> dimensions<span class="hl opt">;</span>
-  <span class="hl kwa">const</span> <span class="hl opt">[</span>mx<span class="hl opt">,</span> my<span class="hl opt">] =</span> margin<span class="hl opt">;</span>
-
-  <span class="hl slc">// Compute the diagonal vector for both user &amp; screen coordinates. </span>
-  <span class="hl kwa">const</span> <span class="hl opt">[</span>userx<span class="hl opt">,</span> usery<span class="hl opt">] = [</span>brx <span class="hl opt">-</span> tlx<span class="hl opt">,</span> bry <span class="hl opt">-</span> tly<span class="hl opt">];</span>
-  <span class="hl kwa">const</span> <span class="hl opt">[</span>screenx<span class="hl opt">,</span> screeny<span class="hl opt">] = [</span>sx <span class="hl opt">-</span> mx <span class="hl opt">*</span> <span class="hl num">2</span><span class="hl opt">,</span> sy <span class="hl opt">-</span> my <span class="hl opt">*</span> <span class="hl num">2</span><span class="hl opt">];</span>
+  <span class="hl slc">// Compute the diagonal vector for both bounding rects.</span>
+  <span class="hl kwa">const</span> <span class="hl opt">[</span>sdx<span class="hl opt">,</span> sdy<span class="hl opt">] = [</span>sbrx <span class="hl opt">-</span> stlx<span class="hl opt">,</span> sbry <span class="hl opt">-</span> stly<span class="hl opt">];</span>
+  <span class="hl kwa">const</span> <span class="hl opt">[</span>ddx<span class="hl opt">,</span> ddy<span class="hl opt">] = [</span>dbrx <span class="hl opt">-</span> dtlx<span class="hl opt">,</span> dbry <span class="hl opt">-</span> dtly<span class="hl opt">];</span>
 
   <span class="hl slc">// Find the minimum amount to scale the user draw-area by to fill the screen.</span>
-  <span class="hl kwa">const</span> <span class="hl opt">[</span>ratiox<span class="hl opt">,</span> ratioy<span class="hl opt">] = [</span>screenx <span class="hl opt">/</span> userx<span class="hl opt">,</span> screeny<span class="hl opt">,</span> usery<span class="hl opt">];</span>
-  <span class="hl kwa">const</span> scale <span class="hl opt">=</span> Math<span class="hl opt">.</span><span class="hl kwd">min</span><span class="hl opt">(</span>ratiox<span class="hl opt">,</span> ratioy<span class="hl opt">);</span>
+  <span class="hl kwa">const</span> <span class="hl opt">[</span>rx<span class="hl opt">,</span> ry<span class="hl opt">] = [</span>ddx <span class="hl opt">/</span> sdx<span class="hl opt">,</span> ddy <span class="hl opt">/</span> sdy<span class="hl opt">];</span>
+  <span class="hl kwa">const</span> a <span class="hl opt">=</span> Math<span class="hl opt">.</span><span class="hl kwd">min</span><span class="hl opt">(</span>rx<span class="hl opt">,</span> ry<span class="hl opt">);</span>
 
-  <span class="hl slc">// If ratiox !== ratioy, we need to shift our scaled coordinates to the</span>
-  <span class="hl slc">// center of the screen.</span>
-  <span class="hl kwa">const</span> <span class="hl opt">[</span>scaledx<span class="hl opt">,</span> scaledy<span class="hl opt">] = [</span>userx <span class="hl opt">*</span> scale<span class="hl opt">,</span> usery <span class="hl opt">*</span> scale<span class="hl opt">];</span>
-  <span class="hl kwa">const</span> <span class="hl opt">[</span>tocx<span class="hl opt">,</span> tocy<span class="hl opt">] = [(</span>screenx <span class="hl opt">-</span> scaledx<span class="hl opt">) /</span> <span class="hl num">2</span><span class="hl opt">, (</span>screeny <span class="hl opt">-</span> scaledy<span class="hl opt">) /</span> <span class="hl num">2</span><span class="hl opt">];</span>
-  <span class="hl kwa">const</span> <span class="hl opt">[</span>offsetx<span class="hl opt">,</span> offsety<span class="hl opt">] = [</span>tocx <span class="hl opt">+</span> mx<span class="hl opt">,</span> tocy <span class="hl opt">+</span> my<span class="hl opt">];</span>
+  <span class="hl slc">// Compute the translation to the center of the new coordinates, accounting </span>
+  <span class="hl slc">// for the fact that rx may not equal ry by centering the smaller dimension.</span>
+  <span class="hl kwa">const</span> <span class="hl opt">[</span>ox<span class="hl opt">,</span> oy<span class="hl opt">] = [(</span>ddx <span class="hl opt">-</span> sdx <span class="hl opt">*</span> a<span class="hl opt">) *</span> <span class="hl num">0.5</span> <span class="hl opt">+</span> dtlx<span class="hl opt">, (</span>ddy <span class="hl opt">-</span> sdy <span class="hl opt">*</span> a<span class="hl opt">) *</span> <span class="hl num">0.5</span> <span class="hl opt">+</span> dtly<span class="hl opt">];</span>
 
   <span class="hl slc">// At this point, we translate from user to screen coordinates using</span>
-  <span class="hl slc">//     (pt - tl) * scale + offset</span>
-  <span class="hl slc">// We can skip one arithmatic operation if we rewrite that as</span>
-  <span class="hl slc">//     pt * scale - tl * scale + offset</span>
-  <span class="hl slc">// ... and precompute the constants.</span>
-  <span class="hl kwa">const</span> <span class="hl opt">[</span>bx<span class="hl opt">,</span> by<span class="hl opt">] = [-</span>tlx <span class="hl opt">*</span> scale <span class="hl opt">+</span> offsetx<span class="hl opt">, -</span>tly <span class="hl opt">*</span> scale <span class="hl opt">+</span> offsety<span class="hl opt">];</span>
+  <span class="hl slc">//     (pt - tl) * a + o</span>
+  <span class="hl slc">// We can skip some arithmatic in our output function by rewriting as</span>
+  <span class="hl slc">//     pt * a - tl * a + o</span>
+  <span class="hl slc">// ... and folding the constants into the form</span>
+  <span class="hl slc">//     pt * a + b</span>
+  <span class="hl kwa">const</span> <span class="hl opt">[</span>bx<span class="hl opt">,</span> by<span class="hl opt">] = [-</span>stlx <span class="hl opt">*</span> a <span class="hl opt">+</span> ox<span class="hl opt">, -</span>stly <span class="hl opt">*</span> a <span class="hl opt">+</span> oy<span class="hl opt">];</span>
 
-  <span class="hl slc">// The result is a mapping from user to screen coordinates.</span>
   <span class="hl kwa">return</span> <span class="hl opt">(</span>inp<span class="hl opt">) =&gt; {</span>
     <span class="hl slc">// Scalar values (such as stroke-width, or radius) are only scaled by a</span>
     <span class="hl slc">// constant, not translated.</span>
     <span class="hl kwa">if</span> <span class="hl opt">(</span><span class="hl kwa">typeof</span> inp <span class="hl opt">===</span> <span class="hl str">&apos;number&apos;</span><span class="hl opt">) {</span>
-      <span class="hl kwa">return</span> inp <span class="hl opt">*</span> scale<span class="hl opt">;</span>
+      <span class="hl kwa">return</span> inp <span class="hl opt">*</span> a<span class="hl opt">;</span>
     <span class="hl opt">}</span>
     <span class="hl kwa">const</span> <span class="hl opt">[</span>x<span class="hl opt">,</span> y<span class="hl opt">] =</span> inp<span class="hl opt">;</span>
-    <span class="hl kwa">return</span> <span class="hl opt">[</span>x <span class="hl opt">*</span> scale <span class="hl opt">+</span> bx<span class="hl opt">,</span> y <span class="hl opt">*</span> scale <span class="hl opt">+</span> by<span class="hl opt">];</span>
+    <span class="hl kwa">return</span> <span class="hl opt">[</span>x <span class="hl opt">*</span> a <span class="hl opt">+</span> bx<span class="hl opt">,</span> y <span class="hl opt">*</span> a <span class="hl opt">+</span> by<span class="hl opt">];</span>
   <span class="hl opt">}</span>
 <span class="hl opt">}</span>
 </pre>
-<!--HTML generated by highlight 3.41, http://www.andre-simon.de/-->
-
 
 ### Usage examples
 
 <svg width="100%" height="120px">
   <text x="2px" y="38px" style="font:16px monospace;fill:darkblue">■</text>
-  <text x="25px" y="40px" style="font:16px monospace;fill:darkblue">User Coordinates</text>
+  <text x="25px" y="40px" style="font:16px monospace;fill:darkblue">Source Coordinates</text>
   <text x="2px" y="68px" style="font:16px monospace;fill:tomato">■</text>
-  <text x="25px" y="70px" style="font:16px monospace;fill:tomato">Screen Coordinates</text>
+  <text x="25px" y="70px" style="font:16px monospace;fill:tomato">Destination Coordinates</text>
   <text x="2px" y="98px" style="font:16px monospace;fill:black">|</text>
   <text x="25px" y="100px" style="font:16px monospace;fill:black">Translated Draw Area</text>
 </svg>

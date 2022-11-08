@@ -1,8 +1,8 @@
 ---
 title: '"how you see me"'
 date: 2022-07-23
-summary: Computer-generated, human-curated series of abstract paint mixing
-thumbnails: [/img/art/how-you-see-me/thumbnail/how-you-see-me-1.png, /img/art/how-you-see-me/thumbnail/how-you-see-me-10.png]
+summary: Computer-generated, human-curated series of 19 generative gestural works. <i>(ongoing)</i>
+thumbnails: [/img/art/how-you-see-me/thumbnail/how-you-see-me-1.webp, /img/art/how-you-see-me/thumbnail/how-you-see-me-10.webp]
 draft: false
 ---
 
@@ -89,6 +89,18 @@ Chromatics](https://verse.works/exhibitions/chromatics-part-1) exhibition.
 <figure class="wide">
   <img src="/img/art/how-you-see-me/high-res/how-you-see-me-12.webp">
   <figcaption>#12 · <a href="/img/art/how-you-see-me/high-res/how-you-see-me-12.png">high-res</a> · <a href="https://objkt.com/asset/KT1Q6cr9sscJYtL4m9CpVscu2SpqUxe9yZoo/11">objkt</a>
+  </figcaption>
+</figure>
+
+<figure class="wide">
+  <img src="/img/art/how-you-see-me/high-res/how-you-see-me-13.webp">
+  <figcaption>#13 · <a href="/img/art/how-you-see-me/high-res/how-you-see-me-13.png">high-res</a> · <a href="https://objkt.com/asset/KT1Q6cr9sscJYtL4m9CpVscu2SpqUxe9yZoo/12">objkt</a>
+  </figcaption>
+</figure>
+
+<figure class="wide">
+  <img src="/img/art/how-you-see-me/high-res/how-you-see-me-14.webp">
+  <figcaption>#14 · <a href="/img/art/how-you-see-me/high-res/how-you-see-me-14.png">high-res</a> · <a href="https://objkt.com/asset/KT1Q6cr9sscJYtL4m9CpVscu2SpqUxe9yZoo/13">objkt</a>
   </figcaption>
 </figure>
 </div>
