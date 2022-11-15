@@ -103,4 +103,16 @@ Chromatics](https://verse.works/exhibitions/chromatics-part-1) exhibition.
   <figcaption>#14 · <a href="/img/art/how-you-see-me/high-res/how-you-see-me-14.png">high-res</a> · <a href="https://objkt.com/asset/KT1Q6cr9sscJYtL4m9CpVscu2SpqUxe9yZoo/13">objkt</a>
   </figcaption>
 </figure>
+
+<figure class="wide">
+  <img src="/img/art/how-you-see-me/high-res/how-you-see-me-15.webp">
+  <figcaption>#15 · <a href="/img/art/how-you-see-me/high-res/how-you-see-me-15.png">high-res</a> · <a href="https://objkt.com/asset/KT1Q6cr9sscJYtL4m9CpVscu2SpqUxe9yZoo/14">objkt</a>
+  </figcaption>
+</figure>
+
+<figure class="wide">
+  <img src="/img/art/how-you-see-me/high-res/how-you-see-me-16.webp">
+  <figcaption>#16 · <a href="/img/art/how-you-see-me/high-res/how-you-see-me-16.png">high-res</a> · <a href="https://objkt.com/asset/KT1Q6cr9sscJYtL4m9CpVscu2SpqUxe9yZoo/15">objkt</a>
+  </figcaption>
+</figure>
 </div>
