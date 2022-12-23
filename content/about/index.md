@@ -14,6 +14,9 @@ You can find me on [twitter](https://twitter.com/larswander), and sometimes
 
 ### Art
 
+I'm represented by [ARTXCODE](https://artxcode.io). Please reach out to `toni
+[at] artxcode.io` for commissions & such.
+
 * [objkt](https://objkt.com/profile/larswander/)
 * [verse](https://verse.works/persons/lars-wander)
 * [fxhash](https://www.fxhash.xyz/u/larswander)

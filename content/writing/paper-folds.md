@@ -1,7 +1,7 @@
 ---
 title: "Paper Folds"
 date: 2022-11-29
-draft: false
+draft: true
 ---
 
 Nearly a year ago, I released 

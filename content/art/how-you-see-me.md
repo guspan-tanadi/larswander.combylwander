@@ -1,7 +1,7 @@
 ---
 title: '"how you see me"'
 date: 2022-07-23
-summary: Computer-generated, human-curated series of 19 generative gestural works. <i>(ongoing)</i>
+summary: Computer-generated, human-curated series of 19 generative gestural works.
 thumbnails: [/img/art/how-you-see-me/thumbnail/how-you-see-me-1.webp, /img/art/how-you-see-me/thumbnail/how-you-see-me-10.webp]
 draft: false
 ---
@@ -125,6 +125,12 @@ Chromatics](https://verse.works/exhibitions/chromatics-part-1) exhibition.
 <figure class="wide">
   <img src="/img/art/how-you-see-me/high-res/how-you-see-me-18.webp">
   <figcaption>#18 · <a href="/img/art/how-you-see-me/high-res/how-you-see-me-18.png">high-res</a> · <a href="https://objkt.com/asset/KT1Q6cr9sscJYtL4m9CpVscu2SpqUxe9yZoo/17">objkt</a>
+  </figcaption>
+</figure>
+
+<figure class="wide">
+  <img src="/img/art/how-you-see-me/high-res/how-you-see-me-19.webp">
+  <figcaption>#19 · <a href="/img/art/how-you-see-me/high-res/how-you-see-me-19.png">high-res</a> · <a href="https://objkt.com/asset/KT1Q6cr9sscJYtL4m9CpVscu2SpqUxe9yZoo/18">objkt</a>
   </figcaption>
 </figure>
 </div>
