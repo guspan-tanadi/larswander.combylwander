@@ -15,7 +15,7 @@
  */
 
 /**
- * Returns a function that translates between the source and destination
+ * Returns a function that transforms between the source and destination
  * coordinate space while preserving the ratio between the input x & y
  * dimensions.
  *
@@ -24,7 +24,7 @@
  * @param {[number, number]} dtl Top-left point bounding the destination.
  * @param {[number, number]} dbr Bottom-right point bounding the destination.
  */
-function translateFn(stl, sbr, dtl, dbr) {
+function transformFn(stl, sbr, dtl, dbr) {
   const [stlx, stly] = stl;
   const [sbrx, sbry] = sbr;
   const [dtlx, dtly] = dtl;
@@ -42,7 +42,7 @@ function translateFn(stl, sbr, dtl, dbr) {
   // for the fact that rx may not equal ry by centering the smaller dimension.
   const [ox, oy] = [(ddx - sdx * a) * 0.5 + dtlx, (ddy - sdy * a) * 0.5 + dtly];
 
-  // At this point, we translate from user to screen coordinates using
+  // At this point, we transform from user to screen coordinates using
   //     (pt - tl) * a + o
   // We can skip some arithmatic in our output function by rewriting as
   //     pt * a - tl * a + o
