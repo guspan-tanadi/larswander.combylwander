@@ -474,17 +474,17 @@ blockquote {
 /* highlight theme: Kwrite Editor */
 body.hl	{ background-color:#ffffff; }
 pre.hl	{ color:#000000; background-color:#ffffff; font-size:11pt; font-family:'Roboto Mono';}
-.hl.num { color:#000000; }
+.hl.num { color:#009933; }
 .hl.esc { color:#000000; }
 .hl.str { color:#800000; }
 .hl.pps { color:#800000; }
 .hl.slc { color:#228b22; }
 .hl.com { color:#228b22; }
 .hl.ppc { color:#733710; }
-.hl.opt { color:#000000; }
+.hl.opt { color:#404040; }
 .hl.ipl { color:#000000; }
 .hl.lin { color:#808080; }
 .hl.kwa { color:#0000ff; }
 .hl.kwb { color:#000000; }
 .hl.kwc { color:#0000ff; }
-.hl.kwd { color:#000000; }
+.hl.kwd { color:#a06030; }

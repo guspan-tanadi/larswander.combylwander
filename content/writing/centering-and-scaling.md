@@ -1,14 +1,15 @@
 ---
-title: "Centering and Scaling 2D Generative Art"
-date: 2022-12-23
+title: "Centering and Scaling"
+date: 2022-12-27
 draft: false
 ---
 
 The function I'm sharing here is probably my most used piece of code when it
 comes to making generative art. It shows up in practically every project I've
-worked on. Most of the time, I use it to center and set margins for a piece
-after it's generated during rendering (but there are many other scenarios where
-it's useful as well).
+worked on, and originated from my plotter practice. Most of the time, I use it
+to center and set margins for a piece after it's generated during rendering
+(but there are many other scenarios where it's useful as well that I'll show
+below).
 
 Centering, scaling, and setting margins on 2D generative art is
 something I see a lot of new generative artists struggle with, so I'm sharing
@@ -18,7 +19,7 @@ this to (hopefully) make some of your lives a little easier.
 
 Generally speaking (and there are always exceptions) when making generative
 art it's a bad idea to use a single, fixed resolution for your
-output (e.g. only 1000x1000px): 
+output (e.g. only 1000x1000px):
 
   * Your art may be viewed on a range of screen shapes and sizes, and you
     probably want it to look as good as possible in these different conditions.
@@ -27,9 +28,10 @@ output (e.g. only 1000x1000px):
     3000x3000px of resolution.
 
 A common approach is to generate all of your shapes/geometry on the unit square
-(all `x,y` coordinates fall in the range `[0, 1]`), and then before rendering
-multiply by the screen resolution. This works fine if your output resolution is
-still square, and your source geometry is perfectly bounded by the unit square.
+(meaning all `x, y` coordinates fall in the range `[0, 1]`), and then when
+rendering multiply all values by the screen resolution. This works fine if your
+output resolution is still square, and your source geometry is perfectly
+bounded by the unit square.
 
 <svg width="100%" height="370px" viewbox="0 0 600 370">
   <defs>
@@ -57,7 +59,7 @@ still square, and your source geometry is perfectly bounded by the unit square.
 </svg>
 
 However, if you want to adapt your artwork to a range of screen sizes, simply
-scaling the unit square by the window size doesn't work:
+scaling the unit square by the window size doesn't work.
 
 <svg width="100%" height="370px" viewbox="0 0 600 370">
   <defs>
@@ -114,7 +116,7 @@ is projected onto the screen:
 </svg>
 
 And sometimes, trying to fit your work into a unit square is impossible,
-because the underlying generative system is chaotic and unpredicatble. The
+because the underlying generative system is chaotic and unpredictable. The
 below code and approach solves all these problems for 2D generative artwork.
 
 ## High-level idea
@@ -139,12 +141,13 @@ The way I usually do this is something like:
 ### Bounding boxes
 
 For historical reasons, computer screens generally treat the top-left corner as
-the origin `(0, 0)`, and the bottom-right corner as the largest coordinate. I
+the origin `(0, 0)` with values growing towards the bottom-right corner. I
 apply this same terminology to "bounding boxes", which are the smallest
-rectangles possible that entirely contain some set of shapes. 
+rectangles possible that entirely contain some set of shapes. Bounding boxes
+are critical to this approach, as they define the area to be scaled & centered.
 
-Here I draw the bounding box for two triangles, labeled with the top-left and
-bottom-right corners that define the bounding box.
+To illustrate this, here is the bounding box for two triangles, labeled with
+its top-left and bottom-right corners.
 
 <svg width="100%" height="450px" viewbox="0 0 800 450">
   <g transform="translate(0 70)">
@@ -160,20 +163,21 @@ bottom-right corners that define the bounding box.
   </g>
 </svg>
 
-Fortunately, finding the bounding box when you know a shape's vertices is
+Finding the bounding box when you know some shapes' vertices is
 simple: the top-left corner is the smallest `x` and `y` coordinates among the
-vertices, and the bottom-right corner is the largest.
+vertices, and the bottom-right corner is the largest. You may need to account
+for objects' stroke-width, radius, and similar here too.
 
 ## Code
 
-I'm releasing this under the 
+I'm releasing this under the
 [Apache-2.0 License](https://www.apache.org/licenses/LICENSE-2.0). It's
-available for copy-paste below, or [here](/js/center.js). If you use or modify
-this, please give proper attribution :) 
+available for copy-paste below, or [here](/js/transform.js). If you use or modify
+this, please give proper attribution :)
 
 > Note: to avoid external dependencies (and make it easy to copy-paste into
 > your project), this code represents 2D coordinates
-> as 2-element lists. You're welcome to translate this to use 
+> as 2-element lists. You're welcome to translate this to use
 > [P5's Vectors](https://p5js.org/reference/#/p5.Vector) if you prefer.
 
 > Another note: the `transformFn` code returns a function. This is done to
@@ -210,7 +214,7 @@ this, please give proper attribution :)
 
   <span class="hl slc">// At this point, we transform from user to screen coordinates using</span>
   <span class="hl slc">//     (pt - tl) * a + o</span>
-  <span class="hl slc">// We can skip some arithmatic in our output function by rewriting as</span>
+  <span class="hl slc">// We can skip some arithmetic in our output function by rewriting as</span>
   <span class="hl slc">//     pt * a - tl * a + o</span>
   <span class="hl slc">// ... and folding the constants into the form</span>
   <span class="hl slc">//     pt * a + b</span>
@@ -235,47 +239,44 @@ this, please give proper attribution :)
 Say we want to draw the following scene, with coordinates normalized onto the
 unit square:
 
-```
-let triangleVertices = [[.5, 0], [1, 1], [0, 1]];
-let circleCenter = [0.8, 0.5];
-let circleRadius = 0.15;
+<pre class="hl"><span class="hl kwa">let</span> triangleVertices <span class="hl opt">= [[</span><span class="hl num">.5</span><span class="hl opt">,</span> <span class="hl num">0</span><span class="hl opt">], [</span><span class="hl num">1</span><span class="hl opt">,</span> <span class="hl num">1</span><span class="hl opt">], [</span><span class="hl num">0</span><span class="hl opt">,</span> <span class="hl num">1</span><span class="hl opt">]];</span>
+<span class="hl kwa">let</span> circleCenter <span class="hl opt">= [</span><span class="hl num">0.8</span><span class="hl opt">,</span> <span class="hl num">0.5</span><span class="hl opt">];</span>
+<span class="hl kwa">let</span> circleRadius <span class="hl opt">=</span> <span class="hl num">0.15</span><span class="hl opt">;</span>
 
-fill([0, 255, 0]);
-beginShape();
-for (const [x, y] in triangleVertices) vertex(x, y);
-closeShape();
+<span class="hl kwd">fill</span><span class="hl opt">([</span><span class="hl num">0</span><span class="hl opt">,</span> <span class="hl num">0</span><span class="hl opt">,</span> <span class="hl num">255</span><span class="hl opt">]);</span>
+<span class="hl kwd">beginShape</span><span class="hl opt">();</span>
+<span class="hl kwa">for</span> <span class="hl opt">(</span><span class="hl kwa">const</span> <span class="hl opt">[</span>x<span class="hl opt">,</span> y<span class="hl opt">]</span> <span class="hl kwa">of</span> triangleVertices<span class="hl opt">)</span> <span class="hl kwd">vertex</span><span class="hl opt">(</span>x<span class="hl opt">,</span> y<span class="hl opt">);</span>
+<span class="hl kwd">closeShape</span><span class="hl opt">();</span>
 
-fill([255, 0, 0]);
-circle(...circleCenter, circleRadius * 2);
-```
+<span class="hl kwd">fill</span><span class="hl opt">([</span><span class="hl num">255</span><span class="hl opt">,</span> <span class="hl num">0</span><span class="hl opt">,</span> <span class="hl num">0</span><span class="hl opt">]);</span>
+<span class="hl kwd">circle</span><span class="hl opt">(...</span>circleCenter<span class="hl opt">,</span> circleRadius <span class="hl opt">*</span> <span class="hl num">2</span><span class="hl opt">);</span>
+</pre>
 
-<svg width="100%" height="370px" viewbox="0 -20 800 350">
-  <rect x="0" y="0" width="300" height="300" fill="none" stroke="grey" stroke-width="1"/>
-  <text x="300" y="320" font="16px monospace" fill="#666">(1, 1)</text>
-  <g transform="scale(3)">
+<svg width="100%" height="280px" viewbox="-1 -20 800 260">
+  <rect x="0" y="0" width="200" height="200" fill="none" stroke="grey" stroke-width="1"/>
+  <circle cx="200" cy="200" r="2" fill="#666"/>
+  <text x="200" y="220" font="16px monospace" fill="#666">(1, 1)</text>
+  <g transform="scale(2)">
     <path d="M 50 0 L 100 100 L 0 100" fill="#00f" stroke="none"/>
     <circle cx="80" cy="50" r="15" fill="#f00" stroke="none"/>
   </g>
-  <circle cx="300" cy="300" r="2" fill="#666"/>
 </svg>
 
-Perhaps we want to draw that scene on a 6000x3000px window. Our bounding source
-coordinates are `[0, 0]`, and `[1, 1]` as we confined the draw area to the unit
-square, and the bounding destination coordinates are `[0, 0]` and `[6000,
-3000]` (to fill the window).
+Perhaps we want to draw that scene on a 6000x3000px window. The bounding box
+for our source objects is defined by `[0, 0]` and `[1, 1]` (as these objects
+fill the unit square), and the bounding destination coordinates are `[0, 0]`
+and `[6000, 3000]` (to fill the window).
 
+<pre class="hl"><span class="hl kwa">const</span> transform <span class="hl opt">=</span> <span class="hl kwd">transformFn</span><span class="hl opt">([</span><span class="hl num">0</span><span class="hl opt">,</span> <span class="hl num">0</span><span class="hl opt">], [</span><span class="hl num">1</span><span class="hl opt">,</span> <span class="hl num">1</span><span class="hl opt">], [</span><span class="hl num">0</span><span class="hl opt">,</span> <span class="hl num">0</span><span class="hl opt">], [</span><span class="hl num">6000</span><span class="hl opt">,</span> <span class="hl num">3000</span><span class="hl opt">]);</span>
+triangleVertices <span class="hl opt">=</span> triangleVertices<span class="hl opt">.</span><span class="hl kwd">map</span><span class="hl opt">(</span>transform<span class="hl opt">);</span>
+circleCenter <span class="hl opt">=</span> <span class="hl kwd">transform</span><span class="hl opt">(</span>circleCenter<span class="hl opt">);</span>
+circleRadius <span class="hl opt">=</span> <span class="hl kwd">transform</span><span class="hl opt">(</span>circleRadius<span class="hl opt">);</span>
 
-```
-const transform = transformFn([0, 0], [1, 1], [0, 0], [6000, 3000]);
-triangleVertices = triangleVertices.map(transform);
-circleCenter = transform(circleCenter);
-circleRadius = transform(circleRadius);
-
-// rest of draw code...
-```
+<span class="hl slc">// rest of draw code...</span>
+</pre>
 
 > Notice that we call `transform` on coordinates (like the vertices and the
-> circle center), as well as on scalar values (like the circle diameter). It's 
+> circle center), as well as on scalar values (like the circle diameter). It's
 > important to `transform` all values that you want to draw.
 
 <svg width="100%" height="370px" viewbox="0 -20 800 350">
@@ -290,26 +291,25 @@ circleRadius = transform(circleRadius);
 
 ---
 
-Now say we want to add a 500px margin around our scene. To do this, we 
+Now say we want to add a 500px margin around our scene. To do this, we
 shrink our destination draw area by 500px, giving us bounding coordinates of
 `[500, 500]`, and `[5500, 2500]`.
 
-```
-const transform = transformFn([0, 0], [1, 1], [500, 500], [5500, 2500]);
-triangleVertices = triangleVertices.map(transform);
-circleCenter = transform(circleCenter);
-circleRadius = transform(circleRadius);
+<pre class="hl"><span class="hl kwa">const</span> transform <span class="hl opt">=</span> <span class="hl kwd">transformFn</span><span class="hl opt">([</span><span class="hl num">0</span><span class="hl opt">,</span> <span class="hl num">0</span><span class="hl opt">], [</span><span class="hl num">1</span><span class="hl opt">,</span> <span class="hl num">1</span><span class="hl opt">], [</span><span class="hl num">500</span><span class="hl opt">,</span> <span class="hl num">500</span><span class="hl opt">], [</span><span class="hl num">5500</span><span class="hl opt">,</span> <span class="hl num">2500</span><span class="hl opt">]);</span>
+triangleVertices <span class="hl opt">=</span> triangleVertices<span class="hl opt">.</span><span class="hl kwd">map</span><span class="hl opt">(</span>transform<span class="hl opt">);</span>
+circleCenter <span class="hl opt">=</span> <span class="hl kwd">transform</span><span class="hl opt">(</span>circleCenter<span class="hl opt">);</span>
+circleRadius <span class="hl opt">=</span> <span class="hl kwd">transform</span><span class="hl opt">(</span>circleRadius<span class="hl opt">);</span>
 
-// rest of draw code...
-```
+<span class="hl slc">// rest of draw code...</span>
+</pre>
 
-> _I've drawn the destination coordinates with a dashed line to better show
-> where the margins are being set._
+> I've drawn the destination coordinates with a dashed line to better show
+> how the margins are being set.
 
 <svg width="100%" height="370px" viewbox="0 -20 800 350">
   <rect x="0" y="0" width="600" height="300" fill="none" stroke="grey" stroke-width="1"/>
   <rect x="50" y="50" width="500" height="200" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="6"/>
-  <g transform="translate(200, 50) scale(2.0)">
+  <g transform="translate(200, 50) scale(2)">
     <path d="M 50 0 L 100 100 L 0 100" fill="#00f" stroke="none"/>
     <circle cx="80" cy="50" r="15" fill="#f00" stroke="none"/>
   </g>
@@ -326,24 +326,23 @@ circleRadius = transform(circleRadius);
 Now say our generative program is chaotic and unpredictable -- if we confine
 the source coordinates to `[0, 0]` and `[1, 1]` we may not neatly capture what
 we want to draw. In these cases, we need to compute the bounding box for our
-source shapes.  
+source shapes.
 
 Say we create a scene like this:
 
-```
-let triangle1Vertices = Array(3).fill(null).map(_ => [random(), random()]);
-let triangle2Vertices = Array(3).fill(null).map(_ => [random(), random()]);
+<pre class="hl"><span class="hl kwa">let</span> triangle1Vertices <span class="hl opt">=</span> <span class="hl kwd">Array</span><span class="hl opt">(</span><span class="hl num">3</span><span class="hl opt">).</span><span class="hl kwd">fill</span><span class="hl opt">(</span><span class="hl kwa">null</span><span class="hl opt">).</span><span class="hl kwd">map</span><span class="hl opt">(</span>_ <span class="hl opt">=&gt; [</span><span class="hl kwd">random</span><span class="hl opt">(),</span> <span class="hl kwd">random</span><span class="hl opt">()]);</span>
+<span class="hl kwa">let</span> triangle2Vertices <span class="hl opt">=</span> <span class="hl kwd">Array</span><span class="hl opt">(</span><span class="hl num">3</span><span class="hl opt">).</span><span class="hl kwd">fill</span><span class="hl opt">(</span><span class="hl kwa">null</span><span class="hl opt">).</span><span class="hl kwd">map</span><span class="hl opt">(</span>_ <span class="hl opt">=&gt; [</span><span class="hl kwd">random</span><span class="hl opt">(),</span> <span class="hl kwd">random</span><span class="hl opt">()]);</span>
 
-fill([0, 255, 0]);
-beginShape();
-for (const [x, y] in triangle1Vertices) vertex(x, y);
-closeShape();
+<span class="hl kwd">fill</span><span class="hl opt">([</span><span class="hl num">0</span><span class="hl opt">,</span> <span class="hl num">0</span><span class="hl opt">,</span> <span class="hl num">255</span><span class="hl opt">]);</span>
+<span class="hl kwd">beginShape</span><span class="hl opt">();</span>
+<span class="hl kwa">for</span> <span class="hl opt">(</span><span class="hl kwa">const</span> <span class="hl opt">[</span>x<span class="hl opt">,</span> y<span class="hl opt">]</span> <span class="hl kwa">of</span> triangle1Vertices<span class="hl opt">)</span> <span class="hl kwd">vertex</span><span class="hl opt">(</span>x<span class="hl opt">,</span> y<span class="hl opt">);</span>
+<span class="hl kwd">closeShape</span><span class="hl opt">();</span>
 
-fill([255, 0, 0]);
-beginShape();
-for (const [x, y] in triangle2Vertices) vertex(x, y);
-closeShape();
-```
+<span class="hl kwd">fill</span><span class="hl opt">([</span><span class="hl num">255</span><span class="hl opt">,</span> <span class="hl num">0</span><span class="hl opt">,</span> <span class="hl num">0</span><span class="hl opt">]);</span>
+<span class="hl kwd">beginShape</span><span class="hl opt">();</span>
+<span class="hl kwa">for</span> <span class="hl opt">(</span><span class="hl kwa">const</span> <span class="hl opt">[</span>x<span class="hl opt">,</span> y<span class="hl opt">]</span> <span class="hl kwa">of</span> triangle2Vertices<span class="hl opt">)</span> <span class="hl kwd">vertex</span><span class="hl opt">(</span>x<span class="hl opt">,</span> y<span class="hl opt">);</span>
+<span class="hl kwd">closeShape</span><span class="hl opt">();</span>
+</pre>
 
 <svg width="100%" height="370px" viewbox="0 -20 800 350">
   <rect x="0" y="0" width="300" height="300" fill="none" stroke="grey" stroke-width="1"/>
@@ -358,18 +357,17 @@ closeShape();
 Before we go to call our `transformFn`, we need to compute the bounds for our
 source scene. This could look something like this:
 
-```
-// Returns the "top-left-most" point of a pair of points.
-const tl = (a, b) => [Math.min(a[0], b[0]), Math.min(a[1], b[1])];
-// Returns the "bottom-right-most" point of a pair of points.
-const br = (a, b) => [Math.max(a[0], b[0]), Math.max(a[1], b[1])];
+<pre class="hl"><span class="hl slc">// Returns the &quot;top-left-most&quot; point of a pair of points.</span>
+<span class="hl kwa">const</span> tl <span class="hl opt">= (</span>a<span class="hl opt">,</span> b<span class="hl opt">) =&gt; [</span>Math<span class="hl opt">.</span><span class="hl kwd">min</span><span class="hl opt">(</span>a<span class="hl opt">[</span><span class="hl num">0</span><span class="hl opt">],</span> b<span class="hl opt">[</span><span class="hl num">0</span><span class="hl opt">]),</span> Math<span class="hl opt">.</span><span class="hl kwd">min</span><span class="hl opt">(</span>a<span class="hl opt">[</span><span class="hl num">1</span><span class="hl opt">],</span> b<span class="hl opt">[</span><span class="hl num">1</span><span class="hl opt">])];</span>
+<span class="hl slc">// Returns the &quot;bottom-right-most&quot; point of a pair of points.</span>
+<span class="hl kwa">const</span> br <span class="hl opt">= (</span>a<span class="hl opt">,</span> b<span class="hl opt">) =&gt; [</span>Math<span class="hl opt">.</span><span class="hl kwd">max</span><span class="hl opt">(</span>a<span class="hl opt">[</span><span class="hl num">0</span><span class="hl opt">],</span> b<span class="hl opt">[</span><span class="hl num">0</span><span class="hl opt">]),</span> Math<span class="hl opt">.</span><span class="hl kwd">max</span><span class="hl opt">(</span>a<span class="hl opt">[</span><span class="hl num">1</span><span class="hl opt">],</span> b<span class="hl opt">[</span><span class="hl num">1</span><span class="hl opt">])];</span>
 
-const allVertices = [triangle1Vertices, triangle2Vertices].flat();
-const sourceTl = allVertices.reduce(tl);
-const sourceBr = allVertices.reduce(br);
-```
+<span class="hl kwa">const</span> allVertices <span class="hl opt">= [</span>triangle1Vertices<span class="hl opt">,</span> triangle2Vertices<span class="hl opt">].</span><span class="hl kwd">flat</span><span class="hl opt">();</span>
+<span class="hl kwa">const</span> sourceTl <span class="hl opt">=</span> allVertices<span class="hl opt">.</span><span class="hl kwd">reduce</span><span class="hl opt">(</span>tl<span class="hl opt">);</span>
+<span class="hl kwa">const</span> sourceBr <span class="hl opt">=</span> allVertices<span class="hl opt">.</span><span class="hl kwd">reduce</span><span class="hl opt">(</span>br<span class="hl opt">);</span>
+</pre>
 
-<svg width="100%" height="200px" viewbox="0 -10 800 190">
+<svg width="100%" height="180px" viewbox="0 -15 800 165">
   <rect x="9" y="6" width="252" height="114" fill="none" stroke="grey" stroke-width="1"/>
   <text x="15" y="25" font="16px monospace" fill="#666">(0.03, 0.02)</text>
   <circle cx="9" cy="6" r="2" fill="#666"/>
@@ -384,13 +382,12 @@ const sourceBr = allVertices.reduce(br);
 And use our `sourceTl` and `sourceBr` to transform this scene onto a larger
 canvas (say the 6000x3000px window with 500px margins from before):
 
-```
-const transform = transformFn(sourceTl, sourceBr, [500, 500], [5500, 2500]);
-triangle1Vertices = triangle1Vertices.map(transform);
-triangle2Vertices = triangle2Vertices.map(transform);
+<pre class="hl"><span class="hl kwa">const</span> transform <span class="hl opt">=</span> <span class="hl kwd">transformFn</span><span class="hl opt">(</span>sourceTl<span class="hl opt">,</span> sourceBr<span class="hl opt">, [</span><span class="hl num">500</span><span class="hl opt">,</span> <span class="hl num">500</span><span class="hl opt">], [</span><span class="hl num">5500</span><span class="hl opt">,</span> <span class="hl num">2500</span><span class="hl opt">]);</span>
+triangle1Vertices <span class="hl opt">=</span> triangle1Vertices<span class="hl opt">.</span><span class="hl kwd">map</span><span class="hl opt">(</span>transform<span class="hl opt">);</span>
+triangle2Vertices <span class="hl opt">=</span> triangle2Vertices<span class="hl opt">.</span><span class="hl kwd">map</span><span class="hl opt">(</span>transform<span class="hl opt">);</span>
 
-// rest of draw code ...
-```
+<span class="hl slc">// rest of draw code ...</span>
+</pre>
 
 <svg width="100%" height="370px" viewbox="0 -20 800 350">
   <rect x="0" y="0" width="600" height="300" fill="none" stroke="grey" stroke-width="1"/>
@@ -400,29 +397,34 @@ triangle2Vertices = triangle2Vertices.map(transform);
   <circle cx="600" cy="300" r="2" fill="#666"/>
 </svg>
 
+And voila! A nicely centered render.
+
 ### Tiled rendering
 
-If you're making _massive_ generative artworks (e.g. for a mural) that are far
-larger than what the browser or your max texture size supports, a common
-workaround is to render your artwork piece by piece in "tiles", each small
-enough to render individually. The `transformFn` can be used here as well to
-project your output onto each individual tile.
+If you're making _massive_ generative artworks (e.g. printing a mural) that
+require a resolution larger than what your browser or library supports, a
+common workaround is to render your artwork piece by piece in "tiles", each
+small enough to render individually. The `transformFn` can be used here as well
+to project your output onto each individual tile.
 
-```
-const FINAL_RES = [10000, 10000];
-const TILE_COUNT = [10, 10];
-const TILE_RES = [
-  Math.floor(FINAL_RES[0] / TILE_COUNT[0]), 
-  Math.floor(FINAL_RES[1] / TILE_COUNT[1]),
-];
+<pre class="hl"><span class="hl kwa">const</span> FINAL_RES <span class="hl opt">= [</span><span class="hl num">10000</span><span class="hl opt">,</span> <span class="hl num">10000</span><span class="hl opt">];</span>
+<span class="hl kwa">const</span> TILE_COUNT <span class="hl opt">= [</span><span class="hl num">10</span><span class="hl opt">,</span> <span class="hl num">10</span><span class="hl opt">];</span>
+<span class="hl kwa">const</span> TILE_RES <span class="hl opt">= [</span>
+  Math<span class="hl opt">.</span><span class="hl kwd">floor</span><span class="hl opt">(</span>FINAL_RES<span class="hl opt">[</span><span class="hl num">0</span><span class="hl opt">] /</span> TILE_COUNT<span class="hl opt">[</span><span class="hl num">0</span><span class="hl opt">]),</span>
+  Math<span class="hl opt">.</span><span class="hl kwd">floor</span><span class="hl opt">(</span>FINAL_RES<span class="hl opt">[</span><span class="hl num">1</span><span class="hl opt">] /</span> TILE_COUNT<span class="hl opt">[</span><span class="hl num">1</span><span class="hl opt">]),</span>
+<span class="hl opt">];</span>
 
-function transformToTileFn(sourceTl, sourceBr, tileCoords) {
-  const destTl = [-tileCoords[0] * TILE_RES[0], -tileCoords[1] * TILE_RES[1]];
-  const destBr = [destTl[0] + FINAL_RES[0], destTl[1] + FINAL_RES[1]];
-  return transformFn(sourceTl, sourceBr, destTl, destBr);
-}
-```
+<span class="hl kwa">function</span> <span class="hl kwd">transformToTileFn</span><span class="hl opt">(</span>sourceTl<span class="hl opt">,</span> sourceBr<span class="hl opt">,</span> tileCoords<span class="hl opt">) {</span>
+  <span class="hl kwa">const</span> destTl <span class="hl opt">= [-</span>tileCoords<span class="hl opt">[</span><span class="hl num">0</span><span class="hl opt">] *</span> TILE_RES<span class="hl opt">[</span><span class="hl num">0</span><span class="hl opt">], -</span>tileCoords<span class="hl opt">[</span><span class="hl num">1</span><span class="hl opt">] *</span> TILE_RES<span class="hl opt">[</span><span class="hl num">1</span><span class="hl opt">]];</span>
+  <span class="hl kwa">const</span> destBr <span class="hl opt">= [</span>destTl<span class="hl opt">[</span><span class="hl num">0</span><span class="hl opt">] +</span> FINAL_RES<span class="hl opt">[</span><span class="hl num">0</span><span class="hl opt">],</span> destTl<span class="hl opt">[</span><span class="hl num">1</span><span class="hl opt">] +</span> FINAL_RES<span class="hl opt">[</span><span class="hl num">1</span><span class="hl opt">]];</span>
+  <span class="hl kwa">return</span> <span class="hl kwd">transformFn</span><span class="hl opt">(</span>sourceTl<span class="hl opt">,</span> sourceBr<span class="hl opt">,</span> destTl<span class="hl opt">,</span> destBr<span class="hl opt">);</span>
+<span class="hl opt">}</span>
+</pre>
 
 ---
 
-And that's it! I hope this approach helps some fellow generative artists.
+And that's it! I hope this approach is helpful to you. Personally, I find that
+the biggest advantage is never having to think in terms of "screen" coordinate
+space (i.e. in pixels, or centimeters for plotting) when writing code for a
+generative system, knowing that however the program evaluates, it can neatly be
+mapped onto any size screen at the end.

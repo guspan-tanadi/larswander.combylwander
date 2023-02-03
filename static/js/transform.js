@@ -44,7 +44,7 @@ function transformFn(stl, sbr, dtl, dbr) {
 
   // At this point, we transform from user to screen coordinates using
   //     (pt - tl) * a + o
-  // We can skip some arithmatic in our output function by rewriting as
+  // We can skip some arithmetic in our output function by rewriting as
   //     pt * a - tl * a + o
   // ... and folding the constants into the form
   //     pt * a + b
