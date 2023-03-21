@@ -5,9 +5,7 @@ draft: false
 
 <img style='max-height: 200px; max-width: 200px' src='/img/posts/about/face0-cutout.webp'>
 
-I'm a programmer and computer artist. At work, I build visualization tools. At
-home, I do a lot of pen plotting. Thoughts & opinions shared here are mine, and
-not that of any employer.
+I'm a programmer and computer artist.
 
 You can find me on [twitter](https://twitter.com/larswander), and sometimes
 [instagram](https://instagram.com/larswander).
@@ -38,6 +36,7 @@ I'm represented by [ARTXCODE](https://artxcode.io). Please reach out to `toni
 _2023_
 
 * __Bright Moments__ [Tokyo](https://www.brightmoments.io/tokyo), _May 2023_
+* __Berlin GenArt Month__ Representing Abstraction, _March 2023_
 * __The Generative Art Museum__ [World Wide Art](https://tgam.xyz/exhibitions/issue-05-world-wide-art), _Jan 2023_
 
 _2022_
@@ -54,6 +53,10 @@ _2022_
 ### Interviews, Articles
 
 (I'm probably forgetting some)
+
+_2023_
+
+* __Collectors Corner__ (podcast) [Artists Corner #3](https://www.youtube.com/watch?v=YpTsDbOtAnM)
 
 _2022_
 
