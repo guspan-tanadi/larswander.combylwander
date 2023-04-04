@@ -21,7 +21,7 @@ I'm represented by [ARTXCODE](https://artxcode.io). Please reach out to `toni
 * [objkt](https://objkt.com/profile/larswander/)
 * [verse](https://verse.works/persons/lars-wander)
 * [fxhash](https://www.fxhash.xyz/u/larswander)
-* [plottables](https://opensea.io/collection/lines-walking-by-lars-wander)
+* [plottables](https://opensea.io/collection/lines-walking-by-lars-wander-1)
 * [foundation](https://foundation.app/@larswander)
 * [superrare](https://superrare.com/larswander)
 * [my first ERC721 contract](https://opensea.io/collection/lars-wander-art)
@@ -36,6 +36,7 @@ I'm represented by [ARTXCODE](https://artxcode.io). Please reach out to `toni
 _2023_
 
 * __Bright Moments__ [Tokyo](https://www.brightmoments.io/tokyo), _May 2023_
+* __The Seaport__ [On Water](https://theseaport.nyc/events/on-water-2023/), _March 2023_
 * __Berlin GenArt Month__ Representing Abstraction, _March 2023_
 * __The Generative Art Museum__ [World Wide Art](https://tgam.xyz/exhibitions/issue-05-world-wide-art), _Jan 2023_
 
