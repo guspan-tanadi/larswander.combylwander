@@ -576,7 +576,7 @@ src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 In order to help make these more easily reproducible, and
 not fret with large batches of pre-mixed paint, I limited myself to using the
-available [Windsor & Newton](https://www.winsornewton.com/) tube paints.
+available [Winsor & Newton](https://www.winsornewton.com/) tube paints.
 Finding color schemes that worked for this format took dozens and dozens of
 test prints.
 
@@ -639,7 +639,7 @@ The downside is that if you do want to plot in watercolor, you will need to
 write some custom code. Here is a very high-level approach to get you started:
 
 1. Each layer (`<g>` tag) in the SVG has a `class` attribute corresponding to
-   the [Windsor & Newton](https://www.winsornewton.com/) paint used. As
+   the [Winsor & Newton](https://www.winsornewton.com/) paint used. As
    mentioned above, each paint is mixed to a "regular", and "lighter" opacity.
    The "lighter" opacity is denoted with `-faint` in the layer's `class`
    attribute.
@@ -697,7 +697,7 @@ __`Color`__, __`Steps`__, __`Fullness`__, __`Curves`__, __`Breaks`__.
     <figure class="explain">
       <figcaption>
         <b><code>B</code></b> will always try to continue in the same direction it
-        started in. This results in lines froming little "squiggles" as they
+        started in. This results in lines forming little "squiggles" as they
         weave back and forth trying to face their target direction.
       </figcaption>
       <img src="/img/art/lines-walking/high-res/rule-b.webp">
